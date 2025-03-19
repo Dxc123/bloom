@@ -15,13 +15,13 @@ abstract class BlStorage{
 
   ///////////////////////////////////////////////////////////////
   // GetStorage储存
-  static Future<void> save(String key, dynamic value) async {
+  static Future<void> write(String key, dynamic value) async {
     await _storage?.write(key, value);
   }
 
   /// 存储列表（支持泛型类型）
   /// await StorageUtils.saveList<int>('userScores', [100, 90, 85]);
-  static Future<void> saveList<T>(String key, List<T> value) async {
+  static Future<void> writeList<T>(String key, List<T> value) async {
     await _storage?.write(key, value);
   }
 

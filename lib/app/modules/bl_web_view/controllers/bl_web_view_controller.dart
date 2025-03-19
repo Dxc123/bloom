@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
-class BlLoginController extends GetxController {
-  //TODO: Implement BlLoginController
+class BlWebViewController extends GetxController {
+  //TODO: Implement BlWebViewController
 
   final count = 0.obs;
   @override
@@ -20,8 +20,4 @@ class BlLoginController extends GetxController {
   }
 
   void increment() => count.value++;
-
-  void googleSignIn() {}
-  void appleSignIn(){}
-  void visitorSignIn(){}
 }

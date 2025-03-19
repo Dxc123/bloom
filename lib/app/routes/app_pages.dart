@@ -40,13 +40,15 @@ import '../modules/bl_publish/bindings/bl_publish_binding.dart';
 import '../modules/bl_publish/views/bl_publish_view.dart';
 import '../modules/bl_splash/bindings/bl_splash_binding.dart';
 import '../modules/bl_splash/views/bl_splash_view.dart';
+import '../modules/bl_web_view/bindings/bl_web_view_binding.dart';
+import '../modules/bl_web_view/views/bl_web_view_view.dart';
 
 part 'app_routes.dart';
 
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.BL_HOME;
+  static const INITIAL = Routes.BL_SPLASH;
 
   static final routes = [
     GetPage(
@@ -148,6 +150,11 @@ class AppPages {
       name: _Paths.BL_MAIN,
       page: () => const BlMainView(),
       binding: BlMainBinding(),
+    ),
+    GetPage(
+      name: _Paths.BL_WEB_VIEW,
+      page: () => const BlWebViewView(),
+      binding: BlWebViewBinding(),
     ),
   ];
 }
