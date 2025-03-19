@@ -1,0 +1,30 @@
+name: Sync to CodeUp
+
+on:
+  push:
+    branches:
+      - main  # 监听 main 分支推送
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出 GitHub 代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 解决 shallow clone 问题
+
+      - name: 配置 SSH 访问 CodeUp
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.CODEUP_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan codeup.aliyun.com >> ~/.ssh/known_hosts
+        shell: bash
+
+      - name: 推送代码到 CodeUp
+        run: |
+          git remote add codeup git@codeup.aliyun.com:jooz/hani/whiteBao/bloom.git
+          git push -f codeup main
+        shell: bash
