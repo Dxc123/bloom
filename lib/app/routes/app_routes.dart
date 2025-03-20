@@ -25,6 +25,7 @@ abstract class Routes {
   static const BL_LOGIN = _Paths.BL_LOGIN;
   static const BL_MAIN = _Paths.BL_MAIN;
   static const BL_WEB_VIEW = _Paths.BL_WEB_VIEW;
+  static const BL_ME_RECHARGE = _Paths.BL_ME_RECHARGE;
 }
 
 abstract class _Paths {
@@ -51,4 +52,5 @@ abstract class _Paths {
   static const BL_LOGIN = '/bl-login';
   static const BL_MAIN = '/bl-main';
   static const BL_WEB_VIEW = '/bl-web-view';
+  static const BL_ME_RECHARGE = '/bl-me-recharge';
 }

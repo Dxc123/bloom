@@ -8,6 +8,19 @@ class Assets {
   static const String appBlLoginCheckEd = 'assets/images/app/bl_login_check_ed.png';
   static const String appBlLoginGoogle = 'assets/images/app/bl_login_google.png';
   static const String appBlLogo = 'assets/images/app/bl_logo.png';
+  static const String appBlMeArrowRight = 'assets/images/app/bl_me_arrow_right.png';
+  static const String appBlMeAvatar = 'assets/images/app/bl_me_avatar.png';
+  static const String appBlMeCollection = 'assets/images/app/bl_me_collection.png';
+  static const String appBlMeCopy = 'assets/images/app/bl_me_copy.png';
+  static const String appBlMeDiamondArrowRight = 'assets/images/app/bl_me_diamond_arrow_right.png';
+  static const String appBlMeEdit = 'assets/images/app/bl_me_edit.png';
+  static const String appBlMeFeedback = 'assets/images/app/bl_me_feedback.png';
+  static const String appBlMeFocus = 'assets/images/app/bl_me_focus.png';
+  static const String appBlMeHeaderBg = 'assets/images/app/bl_me_header_bg.png';
+  static const String appBlMeLike = 'assets/images/app/bl_me_like.png';
+  static const String appBlMePersonal = 'assets/images/app/bl_me_personal.png';
+  static const String appBlMeRechargeBg = 'assets/images/app/bl_me_recharge_bg.png';
+  static const String appBlMeSetting = 'assets/images/app/bl_me_setting.png';
   static const String appBlSplashBg = 'assets/images/app/bl_splash_bg.png';
 
 }

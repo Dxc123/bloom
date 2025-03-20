@@ -1,23 +1,21 @@
 import 'package:get/get.dart';
 
 class BlMeController extends GetxController {
-  //TODO: Implement BlMeController
+  final titlesList = [
+    "My Like",
+    "My Collection",
+    "My attention",
+    "Feedback",
+    "Setting",
+  ];
+  final imagesList = [
+    "assets/images/app/bl_me_like.png",
+    "assets/images/app/bl_me_collection.png",
+    "assets/images/app/bl_me_focus.png",
+    "assets/images/app/bl_me_feedback.png",
+    "assets/images/app/bl_me_setting.png",
+  ];
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }

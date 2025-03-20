@@ -32,6 +32,8 @@ import '../modules/bl_me/children/bl_me_my_publish/views/bl_me_my_publish_view.d
 import '../modules/bl_me/children/bl_me_setting/bindings/bl_me_setting_binding.dart';
 import '../modules/bl_me/children/bl_me_setting/views/bl_me_setting_view.dart';
 import '../modules/bl_me/views/bl_me_view.dart';
+import '../modules/bl_me_recharge/bindings/bl_me_recharge_binding.dart';
+import '../modules/bl_me_recharge/views/bl_me_recharge_view.dart';
 import '../modules/bl_message/bl_chat/bindings/bl_chat_binding.dart';
 import '../modules/bl_message/bl_chat/views/bl_chat_view.dart';
 import '../modules/bl_message/bl_conversation/bindings/bl_conversation_binding.dart';
@@ -48,7 +50,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.BL_SPLASH;
+  static const INITIAL = Routes.BL_ME;
 
   static final routes = [
     GetPage(
@@ -155,6 +157,11 @@ class AppPages {
       name: _Paths.BL_WEB_VIEW,
       page: () => const BlWebViewView(),
       binding: BlWebViewBinding(),
+    ),
+    GetPage(
+      name: _Paths.BL_ME_RECHARGE,
+      page: () => const BlMeRechargeView(),
+      binding: BlMeRechargeBinding(),
     ),
   ];
 }
