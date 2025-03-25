@@ -94,12 +94,12 @@ class _HcReportDialogViewState extends State<BlReportDialogView> {
                                   ),
                                   if (index == selectIndex.value)
                                     Image.asset(
-                                      "assets/images/app/wi_login_checked.webp",
+                                      "assets/images/app/bl_login_check_ed.png",
                                       fit: BoxFit.cover,
                                     ),
                                   if (index != selectIndex.value)
                                     Image.asset(
-                                      "assets/images/app/wi_login_check.webp",
+                                      "assets/images/app/bl_login_check.png",
                                       color: Colors.grey,
                                       fit: BoxFit.cover,
                                     ),
@@ -172,8 +172,8 @@ class _HcReportDialogViewState extends State<BlReportDialogView> {
                           borderRadius: BorderRadiusDirectional.circular(30),
                           gradient: const LinearGradient(
                             colors: [
-                              Colors.black,
-                              Colors.black,
+                              Color(0xFFF95AAA),
+                              Color(0xFFF95AAA),
                             ],
                             begin: AlignmentDirectional.topCenter,
                             end: AlignmentDirectional.bottomCenter,

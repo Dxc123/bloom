@@ -2,6 +2,36 @@
 class Assets {
   Assets._();
 
+  static const String appAppAvatar1 = 'assets/images/app/app_avatar_1.png';
+  static const String appAppAvatar10 = 'assets/images/app/app_avatar_10.png';
+  static const String appAppAvatar11 = 'assets/images/app/app_avatar_11.png';
+  static const String appAppAvatar12 = 'assets/images/app/app_avatar_12.png';
+  static const String appAppAvatar2 = 'assets/images/app/app_avatar_2.png';
+  static const String appAppAvatar3 = 'assets/images/app/app_avatar_3.png';
+  static const String appAppAvatar4 = 'assets/images/app/app_avatar_4.png';
+  static const String appAppAvatar5 = 'assets/images/app/app_avatar_5.png';
+  static const String appAppAvatar6 = 'assets/images/app/app_avatar_6.png';
+  static const String appAppAvatar7 = 'assets/images/app/app_avatar_7.png';
+  static const String appAppAvatar8 = 'assets/images/app/app_avatar_8.png';
+  static const String appAppAvatar9 = 'assets/images/app/app_avatar_9.png';
+  static const String appAppFlower1 = 'assets/images/app/app_flower_1.png';
+  static const String appAppHomeCover11 = 'assets/images/app/app_homeCover_1_1.png';
+  static const String appAppHomeCover12 = 'assets/images/app/app_homeCover_1_2.png';
+  static const String appAppHomeCover13 = 'assets/images/app/app_homeCover_1_3.png';
+  static const String appAppHomeCover14 = 'assets/images/app/app_homeCover_1_4.png';
+  static const String appBlConversationDelete = 'assets/images/app/bl_conversation_delete.png';
+  static const String appBlConversationGift = 'assets/images/app/bl_conversation_gift.png';
+  static const String appBlDiscoverDetailGift = 'assets/images/app/bl_discover_detail_gift.png';
+  static const String appBlDiscoverDetailMsg = 'assets/images/app/bl_discover_detail_msg.png';
+  static const String appBlDiscoverDetailReport = 'assets/images/app/bl_discover_detail_report.png';
+  static const String appBlDiscoverFollow = 'assets/images/app/bl_discover_follow.png';
+  static const String appBlDiscoverFollowSelect = 'assets/images/app/bl_discover_follow_select.png';
+  static const String appBlDiscoverLikeNormal = 'assets/images/app/bl_discover_like_normal.png';
+  static const String appBlDiscoverLikeSelect = 'assets/images/app/bl_discover_like_select.png';
+  static const String appBlDiscoverReport = 'assets/images/app/bl_discover_report.png';
+  static const String appBlHomeEmpty = 'assets/images/app/bl_home_empty.png';
+  static const String appBlHomeLikeNormal = 'assets/images/app/bl_home_like_normal.png';
+  static const String appBlHomeLikeSelect = 'assets/images/app/bl_home_like_select.png';
   static const String appBlLoginApple = 'assets/images/app/bl_login_apple.png';
   static const String appBlLoginBg = 'assets/images/app/bl_login_bg.png';
   static const String appBlLoginCheck = 'assets/images/app/bl_login_check.png';
@@ -21,6 +51,21 @@ class Assets {
   static const String appBlMePersonal = 'assets/images/app/bl_me_personal.png';
   static const String appBlMeRechargeBg = 'assets/images/app/bl_me_recharge_bg.png';
   static const String appBlMeSetting = 'assets/images/app/bl_me_setting.png';
+  static const String appBlNavMoreDetail = 'assets/images/app/bl_nav_more_detail.png';
+  static const String appBlPublishDelete = 'assets/images/app/bl_publish_delete.png';
+  static const String appBlPublishPicHolder = 'assets/images/app/bl_publish_pic_holder.png';
+  static const String appBlPublishTitle = 'assets/images/app/bl_publish_title.png';
   static const String appBlSplashBg = 'assets/images/app/bl_splash_bg.png';
+  static const String appBlTabBg = 'assets/images/app/bl_tab_bg.png';
+  static const String appBlTabDiscoverNormal = 'assets/images/app/bl_tab_discover_normal.png';
+  static const String appBlTabDiscoverSelect = 'assets/images/app/bl_tab_discover_select.png';
+  static const String appBlTabHomeNormal = 'assets/images/app/bl_tab_home_normal.png';
+  static const String appBlTabHomeSelect = 'assets/images/app/bl_tab_home_select.png';
+  static const String appBlTabMeNormal = 'assets/images/app/bl_tab_me_normal.png';
+  static const String appBlTabMeSelect = 'assets/images/app/bl_tab_me_select.png';
+  static const String appBlTabMessageNormal = 'assets/images/app/bl_tab_message_normal.png';
+  static const String appBlTabMessageSelect = 'assets/images/app/bl_tab_message_select.png';
+  static const String appBlTabPublish = 'assets/images/app/bl_tab_publish.png';
+  static const String configConfigData = 'assets/config/config_data.json';
 
 }

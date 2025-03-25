@@ -64,7 +64,7 @@ class _TrEditNameDialogState extends State<BlEditNameDialogView> {
             Get.back();
           },
           // child: Image.asset(
-          //   "assets/images/app/wi_dialog_arrow_down.webp",
+          //   "assets/images/app/wi_dialog_arrow_down.png",
           //   fit: BoxFit.cover,
           // ),
           child: const Icon(

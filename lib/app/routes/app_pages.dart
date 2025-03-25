@@ -21,6 +21,8 @@ import '../modules/bl_me/children/bl_me_edit/bindings/bl_me_edit_binding.dart';
 import '../modules/bl_me/children/bl_me_edit/views/bl_me_edit_view.dart';
 import '../modules/bl_me/children/bl_me_feedback/bindings/bl_me_feedback_binding.dart';
 import '../modules/bl_me/children/bl_me_feedback/views/bl_me_feedback_view.dart';
+import '../modules/bl_me/children/bl_me_media_black_list/bindings/bl_me_media_black_list_binding.dart';
+import '../modules/bl_me/children/bl_me_media_black_list/views/bl_me_media_black_list_view.dart';
 import '../modules/bl_me/children/bl_me_my_collection_list/bindings/bl_me_my_collection_list_binding.dart';
 import '../modules/bl_me/children/bl_me_my_collection_list/views/bl_me_my_collection_list_view.dart';
 import '../modules/bl_me/children/bl_me_my_focus_list/bindings/bl_me_my_focus_list_binding.dart';
@@ -29,11 +31,11 @@ import '../modules/bl_me/children/bl_me_my_like_list/bindings/bl_me_my_like_list
 import '../modules/bl_me/children/bl_me_my_like_list/views/bl_me_my_like_list_view.dart';
 import '../modules/bl_me/children/bl_me_my_publish/bindings/bl_me_my_publish_binding.dart';
 import '../modules/bl_me/children/bl_me_my_publish/views/bl_me_my_publish_view.dart';
+import '../modules/bl_me/children/bl_me_recharge/bindings/bl_me_recharge_binding.dart';
+import '../modules/bl_me/children/bl_me_recharge/views/bl_me_recharge_view.dart';
 import '../modules/bl_me/children/bl_me_setting/bindings/bl_me_setting_binding.dart';
 import '../modules/bl_me/children/bl_me_setting/views/bl_me_setting_view.dart';
 import '../modules/bl_me/views/bl_me_view.dart';
-import '../modules/bl_me_recharge/bindings/bl_me_recharge_binding.dart';
-import '../modules/bl_me_recharge/views/bl_me_recharge_view.dart';
 import '../modules/bl_message/bl_chat/bindings/bl_chat_binding.dart';
 import '../modules/bl_message/bl_chat/views/bl_chat_view.dart';
 import '../modules/bl_message/bl_conversation/bindings/bl_conversation_binding.dart';
@@ -50,7 +52,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.BL_ME;
+  static const INITIAL = Routes.BL_SPLASH;
 
   static final routes = [
     GetPage(
@@ -112,6 +114,13 @@ class AppPages {
       name: _Paths.BL_ME_MY_PUBLISH,
       page: () => const BlMeMyPublishView(),
       binding: BlMeMyPublishBinding(),
+      children: [
+        GetPage(
+          name: _Paths.BL_ME_MY_PUBLISH,
+          page: () => const BlMeMyPublishView(),
+          binding: BlMeMyPublishBinding(),
+        ),
+      ],
     ),
     GetPage(
       name: _Paths.BL_ME_MY_COLLECTION_LIST,
@@ -162,6 +171,11 @@ class AppPages {
       name: _Paths.BL_ME_RECHARGE,
       page: () => const BlMeRechargeView(),
       binding: BlMeRechargeBinding(),
+    ),
+    GetPage(
+      name: _Paths.BL_ME_MEDIA_BLACK_LIST,
+      page: () => const BlMeMediaBlackListView(),
+      binding: BlMeMediaBlackListBinding(),
     ),
   ];
 }

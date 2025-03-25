@@ -4,7 +4,7 @@ class BlMeController extends GetxController {
   final titlesList = [
     "My Like",
     "My Collection",
-    "My attention",
+    "My focus",
     "Feedback",
     "Setting",
   ];

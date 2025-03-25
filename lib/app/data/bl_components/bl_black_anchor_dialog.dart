@@ -1,31 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-enum WiBlackType { blackAnchor, blackMedia }
+enum BlBlackType { blackAnchor, blackMedia }
 
-class BLBlackAnchorDialog extends StatefulWidget {
-  const BLBlackAnchorDialog({
+class BlBlackAnchorDialog extends StatefulWidget {
+  const BlBlackAnchorDialog({
     super.key,
-    this.type = WiBlackType.blackAnchor,
+    this.type = BlBlackType.blackAnchor,
     required this.onBlack,
   });
-  final WiBlackType type;
+  final BlBlackType type;
   final Function() onBlack;
 
   @override
-  State<BLBlackAnchorDialog> createState() => _BLBlackAnchorDialogState();
+  State<BlBlackAnchorDialog> createState() => _BlBlackAnchorDialogState();
   static Future showDialog({
-    required WiBlackType type,
+    required BlBlackType type,
     required Function() onBlack,
   }) {
     return Get.dialog(
-      BLBlackAnchorDialog(type: type, onBlack: onBlack),
+      BlBlackAnchorDialog(type: type, onBlack: onBlack),
       useSafeArea: false,
     );
   }
 }
 
-class _BLBlackAnchorDialogState extends State<BLBlackAnchorDialog> {
+class _BlBlackAnchorDialogState extends State<BlBlackAnchorDialog> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -45,7 +45,7 @@ class _BLBlackAnchorDialogState extends State<BLBlackAnchorDialog> {
               child: Column(
                 children: [
                   Text(
-                    widget.type == WiBlackType.blackAnchor ? "Blacklist users" : "Blacklist resources",
+                    widget.type == BlBlackType.blackAnchor ? "Blacklist users" : "Blacklist resources",
                     style: const TextStyle(
                       color: Color(0xFF333333),
                       fontSize: 16,
@@ -54,7 +54,7 @@ class _BLBlackAnchorDialogState extends State<BLBlackAnchorDialog> {
                   ),
                   const SizedBox(height: 15),
                   Text(
-                    widget.type == WiBlackType.blackAnchor
+                    widget.type == BlBlackType.blackAnchor
                         ? "After blocking, the other party will no longer see your updates and will not be able to view your updates."
                         : "After blocking, the other party will no longer see your resources and will not be able to view your resources.",
                     textAlign: TextAlign.center,

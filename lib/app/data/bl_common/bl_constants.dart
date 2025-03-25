@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 import '../bl_service/bl_my_info_service.dart';
 
 class BlConstants {
-  static bool isTestMode = false; //切换测试环境开关，发包要注意改成: false
-  static bool haveTestLogin = false; //测试数字登录显示开关 ,发包要注意改成: false
+  static bool isTestMode = true; //切换测试环境开关，发包要注意改成: false
+  static bool haveTestLogin = true; //测试数字登录显示开关 ,发包要注意改成: false
 
   static bool hasInPurchase = false; //是否有内购模块
 
@@ -76,7 +76,7 @@ class BlConstants {
         url = BlConstants.isTestMode ? BlConstants.configBaseUrl_test : BlConstants.configBaseUrl;
         break;
     }
-    debugPrint("AppLogTool--getConfigBaseUrl = $url");
+    debugPrint("BlLogger--getConfigBaseUrl = $url");
     return url;
   }
 
@@ -121,7 +121,7 @@ class BlConstants {
         url = BlConstants.isTestMode ? BlConstants.baseUrl_test : BlConstants.baseUrl;
         break;
     }
-    // AppLogTool.debug("getBaseUrl = $url");
+    // BlLogger.debug("getBaseUrl = $url");
     return url;
   }
 }

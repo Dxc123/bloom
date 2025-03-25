@@ -22,7 +22,7 @@ class BlEmptyView extends StatelessWidget {
           child: Column(
             children: [
               Image.asset(
-                "assets/images/app/wi_home_empty.webp",
+                "assets/images/app/bl_home_empty.png",
                 fit: BoxFit.cover,
               ),
               const Text(

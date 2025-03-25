@@ -18,4 +18,8 @@ class BlLogger {
   static void debug(String message) {
     _logger.d(message);
   }
+  static void debugDio(String message) {
+    // _logger.d(message);
+  }
+
 }

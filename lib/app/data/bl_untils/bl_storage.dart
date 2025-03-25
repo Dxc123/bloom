@@ -3,12 +3,11 @@ import 'package:get_storage/get_storage.dart';
 // import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class BlStorage{
-  static GetStorage? _storage;
+  static late GetStorage _storage;
 
   // static SharedPreferences? _prefs;
 
   static initStorage() async {
-    await GetStorage.init();
     _storage = GetStorage();
     // _prefs = await SharedPreferences.getInstance();
   }
@@ -16,49 +15,49 @@ abstract class BlStorage{
   ///////////////////////////////////////////////////////////////
   // GetStorage储存
   static Future<void> write(String key, dynamic value) async {
-    await _storage?.write(key, value);
+    await _storage.write(key, value);
   }
 
   /// 存储列表（支持泛型类型）
   /// await StorageUtils.saveList<int>('userScores', [100, 90, 85]);
   static Future<void> writeList<T>(String key, List<T> value) async {
-    await _storage?.write(key, value);
+    await _storage.write(key, value);
   }
 
   static dynamic read(String key) {
-    return _storage?.read(key);
+    return _storage.read(key);
   }
 
   /// 获取列表
   /// List<int>? userScores = StorageUtils.getList<int>('userScores');
   static List<T>? readList<T>(String key) {
-    return _storage?.read<List<T>>(key);
+    return _storage.read<List<T>>(key);
   }
 
   static Future<void> remove(String key) async {
-    await _storage?.remove(key);
+    await _storage.remove(key);
   }
 
   static Future<void> clear() async {
-    await _storage?.erase();
+    await _storage.erase();
   }
 
 
   static dynamic getKeys(String key) {
-    return _storage?.getKeys();
+    return _storage.getKeys();
   }
 
   static  dynamic getValues(String key) {
-    return _storage?.getValues();
+    return _storage.getValues();
   }
 
   static bool hasData(String key) {
-    return _storage?.hasData(key) ?? false;
+    return _storage.hasData(key) ?? false;
   }
 
   //  数据监听
   static dynamic listenKey(String key) {
-    return _storage?.listenKey(key, (value) {});
+    return _storage.listenKey(key, (value) {});
   }
 
   ///////////////////////////////////////////////////////////////
