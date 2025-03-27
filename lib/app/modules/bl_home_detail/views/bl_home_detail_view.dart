@@ -35,7 +35,7 @@ class BlHomeDetailView extends GetView<BlHomeDetailController> {
                 item.homeCover ?? "",
                 fit: BoxFit.fill,
                 width: Get.width,
-                height: 400,
+                height: 300,
               ),
             ),
             SliverToBoxAdapter(

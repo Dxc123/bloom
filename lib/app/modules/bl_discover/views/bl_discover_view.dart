@@ -134,12 +134,12 @@ class _BlDiscoverViewState extends State<BlDiscoverView> with AutomaticKeepAlive
                                     ),
                                     InkWell(
                                       onTap: () {
-                                        controller.onCollect(item: item, index: index);
+                                        controller.onLike(item: item, index: index);
                                       },
                                       child: Row(
                                         children: [
                                           Image.asset(
-                                            (item.isCollected ?? false) ? "assets/images/app/bl_discover_like_select.png" : "assets/images/app/bl_discover_like_normal.png",
+                                            (item.isLiked ?? false) ? "assets/images/app/bl_discover_like_select.png" : "assets/images/app/bl_discover_like_normal.png",
                                             fit: BoxFit.cover,
                                           ),
                                           const Text(

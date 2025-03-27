@@ -40,7 +40,7 @@ class BlChatView extends GetView<BlChatController> {
                                   minWidth: 50,
                                 ),
                                 decoration: const BoxDecoration(
-                                  color: Color(0xFF00A79D),
+                                  color: Color(0xFFF95AAA),
                                   borderRadius: BorderRadiusDirectional.only(
                                     topStart: Radius.circular(12),
                                     topEnd: Radius.circular(12),

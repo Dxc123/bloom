@@ -148,8 +148,8 @@ class _TrEditNameDialogState extends State<BlEditNameDialogView> {
                     borderRadius: BorderRadiusDirectional.circular(12),
                     gradient: const LinearGradient(
                       colors: [
-                        Colors.black,
-                        Colors.black,
+                        Color(0xFFF95AAA),
+                        Color(0xFFF95AAA),
                       ],
                       begin: AlignmentDirectional.centerStart,
                       end: AlignmentDirectional.centerEnd,

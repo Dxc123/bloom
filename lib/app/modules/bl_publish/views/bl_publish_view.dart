@@ -33,14 +33,15 @@ class _BlPublishViewState extends State<BlPublishView> with AutomaticKeepAliveCl
       extendBody: true,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        leadingWidth: 180,
-        leading: Padding(
-          padding: const EdgeInsetsDirectional.only(start: 15),
+        leadingWidth: 78 + 15,
+        leading: Container(
+          margin: EdgeInsetsDirectional.only(start: 15),
+          alignment: AlignmentDirectional.center,
           child: Image.asset(
             "assets/images/app/bl_publish_title.png",
             fit: BoxFit.cover,
-            width: 80,
-            height: 40,
+            width: 78,
+            height: 22,
           ),
         ),
         actions: [

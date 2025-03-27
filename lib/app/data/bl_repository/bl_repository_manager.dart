@@ -5,6 +5,7 @@ import 'package:isar/isar.dart';
 // import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 
+import 'bl_hive/bl_hive.dart';
 import 'bl_media/bl_media_repository.dart';
 import 'bl_media/entity/bl_flower_db_entity.dart';
 import 'bl_media/entity/bl_user_db_entity.dart';
@@ -35,6 +36,7 @@ class BlRepositoryManager extends GetxController {
     await Get.putAsync<BlPublishMediaRepository>(() => BlPublishMediaRepository().init());
     await Get.putAsync<BlMessageRepository>(() => BlMessageRepository().init());
     await Get.putAsync<BlMediaRepository>(() => BlMediaRepository().init());
+    await BlHive.initHive();
     return this;
   }
 

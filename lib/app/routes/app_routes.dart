@@ -27,6 +27,7 @@ abstract class Routes {
   static const BL_WEB_VIEW = _Paths.BL_WEB_VIEW;
   static const BL_ME_RECHARGE = _Paths.BL_ME_RECHARGE;
   static const BL_ME_MEDIA_BLACK_LIST = _Paths.BL_ME_MEDIA_BLACK_LIST;
+  static const BL_ME_RIVER_POD = _Paths.BL_ME_RIVER_POD;
 }
 
 abstract class _Paths {
@@ -55,4 +56,5 @@ abstract class _Paths {
   static const BL_WEB_VIEW = '/bl-web-view';
   static const BL_ME_RECHARGE = '/bl-me-recharge';
   static const BL_ME_MEDIA_BLACK_LIST = '/bl-me-media-black-list';
+  static const BL_ME_RIVER_POD = '/bl-me-river-pod';
 }

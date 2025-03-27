@@ -43,7 +43,7 @@ class BlImageNetwork extends StatelessWidget {
       cacheHeight: cacheHeight,
       matchTextDirection: matchTextDirection,
       loadStateChanged: (ExtendedImageState state) {
-        BlLogger.debug("state.extendedImageLoadState = ${state.extendedImageLoadState}");
+        // BlLogger.debug("state.extendedImageLoadState = ${state.extendedImageLoadState}");
         if (state.extendedImageLoadState == LoadState.loading) {
           return Center(
             child: CircularProgressIndicator(
@@ -55,7 +55,7 @@ class BlImageNetwork extends StatelessWidget {
           return ClipRRect(
             borderRadius: borderRadius ?? BorderRadiusDirectional.circular(20),
             child: Image.asset(
-              placeholder ?? "assets/images/app/bl_pic_holder.png",
+              placeholder ?? "assets/images/app/bl_logo.png",
               fit: BoxFit.cover,
             ),
           );

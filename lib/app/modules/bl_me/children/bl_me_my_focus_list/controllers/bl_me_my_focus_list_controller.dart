@@ -67,24 +67,24 @@ class BlMeMyFocusListController extends GetxController {
     });
   }
 
-  void deleteFollow22(BlFlowerDbEntity model) {
-    EasyLoading.show();
-    Future.delayed(const Duration(milliseconds: 200), () async {
-      EasyLoading.dismiss();
-      await BlMediaRepository.to.updateIsCollectedOneFlowerMedia(
-        flowerId: model.flowerId ?? "",
-        isCollected: false,
-        callback: () {},
-      );
-      onRefresh(showLoading: false);
-    });
-  }
+  // void deleteFollow22(BlFlowerDbEntity model) {
+  //   EasyLoading.show();
+  //   Future.delayed(const Duration(milliseconds: 200), () async {
+  //     EasyLoading.dismiss();
+  //     await BlMediaRepository.to.updateIsCollectedOneFlowerMedia(
+  //       flowerId: model.flowerId ?? "",
+  //       isCollected: false,
+  //       callback: () {},
+  //     );
+  //     onRefresh(showLoading: false);
+  //   });
+  // }
 
   void toDetail(BlUserDbEntity item) {
-    Get.toNamed(Routes.BL_HOME_DETAIL, arguments: item);
-  }
-
-  void toDetail22(BlFlowerDbEntity item) {
     Get.toNamed(Routes.BL_DISCOVER_DETAIL, arguments: item);
   }
+
+  // void toDetail22(BlFlowerDbEntity item) {
+  //   Get.toNamed(Routes.BL_DISCOVER_DETAIL, arguments: item);
+  // }
 }

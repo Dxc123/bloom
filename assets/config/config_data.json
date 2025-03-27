@@ -5,13 +5,196 @@
       "homeCover": "assets/images/app/app_homeCover_1_1.png",
       "title": "Loving and being loved happen at the same time, double the happiness!",
       "des": "Today's happiness is brought by flowers! The moment I opened the package, the rich fragrance of flowers instantly surrounded me, and the delicate petals seemed to be telling of endless tenderness. My heart was full of joy and I felt that I was hit hard by love. I was so happy that I wanted to spin in circles~",
-      "nickName": "Emma",
+      "nickName": "Ethan Carter",
       "avatar": "assets/images/app/app_avatar_1.png",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
       "picList": [
         "assets/images/app/app_homeCover_1_1.png",
         "assets/images/app/app_homeCover_1_2.png",
         "assets/images/app/app_homeCover_1_3.png",
         "assets/images/app/app_homeCover_1_4.png"
+      ]
+    },
+    {
+      "userId": "202530002",
+      "homeCover": "assets/images/app/app_homeCover_2_1.png",
+      "title": "If Christmas had a scent, it would be this bouquet! \uD83C\uDF32\uD83C\uDF39",
+      "des": "I’ve been wrapped up in holiday chaos—shopping, cooking, decorating—but this surprise delivery stopped me in my tracks. A million thanks to the wonderful soul who sent these! The mix of roses, pine, and eucalyptus is like a winter garden dream. It’s not just a gift; it’s a reminder to slow down and savor the season’s joy. My home smells like a Christmas fairy tale now, and my heart is bursting with gratitude. \uD83C\uDF81✨ Whoever you are, you’re my holiday hero! #ChristmasCheer #BlessedWithLove",
+      "nickName": "Sophia Mitchell",
+      "avatar": "assets/images/app/app_avatar_2.png",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "picList": [
+        "assets/images/app/app_homeCover_2_1.png",
+        "assets/images/app/app_homeCover_2_2.png"
+      ]
+    },
+    {
+      "userId": "202530003",
+      "homeCover": "assets/images/app/app_homeCover_3_1.png",
+      "title": "This is exactly what holiday spirit feels like!",
+      "des": "My heart just exploded with holiday joy! Walking into my home to find this breathtaking arrangement waiting for me - the vibrant reds, the festive greens, the delicate whites - it's like Christmas magic in floral form! The thoughtfulness behind this gift has me emotional. Whoever sent this, you've captured the very essence of the season in these blooms. My entire living room is now filled with their sweet fragrance, and my whole week just got brighter. This is exactly what holiday spirit feels like! #BestGiftEver #ChristmasCheer",
+      "nickName": "Liam Reynolds",
+      "avatar": "assets/images/app/app_avatar_3.png",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "picList": [
+        "assets/images/app/app_homeCover_3_1.png",
+        "assets/images/app/app_homeCover_3_2.png",
+        "assets/images/app/app_homeCover_3_2.png"
+      ]
+    },
+    {
+      "userId": "202530004",
+      "homeCover": "assets/images/app/app_homeCover_4_1.png",
+      "title": "a stunning bouquet of flowers! \uD83C\uDF38\uD83D\uDC90 ",
+      "des": "Woke up to the most beautiful surprise today—a stunning bouquet of flowers! 🌸💐 Honestly, I can't stop smiling. Whoever sent this, you just made my entire week. Thank you from the bottom of my heart! ❤️✨",
+      "nickName": "Olivia Bennett",
+      "avatar": "assets/images/app/app_avatar_4.png",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "picList": [
+        "assets/images/app/app_homeCover_4_1.png",
+        "assets/images/app/app_homeCover_4_2.png"
+      ]
+    },
+    {
+      "userId": "202530005",
+      "homeCover": "assets/images/app/app_homeCover_5_1.png",
+      "title": "Feeling incredibly grateful and oh-so-loved! \uD83D\uDC95",
+      "des": "Flowers have this magical way of making everything feel brighter, don’t they? 🌿🌷 Just received the most gorgeous arrangement, and I swear my whole apartment feels happier now. Feeling incredibly grateful and oh-so-loved! 💕",
+      "nickName": "Noah Foster",
+      "avatar": "assets/images/app/app_avatar_5.png",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "picList": [
+        "assets/images/app/app_homeCover_5_1.png",
+        "assets/images/app/app_homeCover_5_2.png",
+        "assets/images/app/app_homeCover_5_3.png"
+      ]
+    },
+    {
+      "userId": "202530006",
+      "homeCover": "assets/images/app/app_homeCover_6_1.png",
+      "title": "it’s all just so heartwarming.",
+      "des": "Nothing beats the joy of receiving fresh flowers unexpectedly! 🌻💛 The colors, the fragrance, the thought behind it—it’s all just so heartwarming. Whoever you are, you truly know how to make someone’s day extra special!",
+      "nickName": "Ava Sinclair",
+      "avatar": "assets/images/app/app_avatar_6.png",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "picList": [
+        "assets/images/app/app_homeCover_6_1.png",
+        "assets/images/app/app_homeCover_6_2.png"
+      ]
+    },
+    {
+      "userId": "202530007",
+      "homeCover": "assets/images/app/app_homeCover_7_1.png",
+      "title": "Today, my heart is full! \uD83C\uDF39\uD83D\uDC96",
+      "des": "I don’t know who needs to hear this, but flowers are never ‘just flowers.’ They are a little reminder that beauty exists, that someone cares, and that happiness can come in the simplest of forms. Today, my heart is full! 🌹💖",
+      "nickName": "Jackson Hayes",
+      "avatar": "assets/images/app/app_avatar_7.png",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "picList": [
+        "assets/images/app/app_homeCover_7_1.png",
+        "assets/images/app/app_homeCover_7_2.png"
+      ]
+    },
+    {
+      "userId": "202530008",
+      "homeCover": "assets/images/app/app_homeCover_8_1.png",
+      "title": " I feel so incredibly lucky right now! \uD83E\uDD70",
+      "des": "What a beautiful way to start the day—fresh blooms, a cup of coffee, and a heart overflowing with gratitude! 🌼☕ Whoever sent these, you have officially won at life. I feel so incredibly lucky right now! 🥰",
+      "nickName": "Isabella Thornton",
+      "avatar": "assets/images/app/app_avatar_8.png",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "picList": [
+        "assets/images/app/app_homeCover_8_1.png",
+        "assets/images/app/app_homeCover_8_2.png"
+      ]
+    },
+    {
+      "userId": "202530009",
+      "homeCover": "assets/images/app/app_homeCover_9_1.png",
+      "title": "flowers are the music of the earth",
+      "des": "They say flowers are the music of the earth, and today, my home is filled with the most beautiful melody. 🎶🌸 To the wonderful soul who sent these—thank you for bringing so much joy into my life today! You are truly amazing. 💕",
+      "nickName": "Lucas Grayson",
+      "avatar": "assets/images/app/app_avatar_9.png",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "picList": [
+        "assets/images/app/app_homeCover_9_1.png",
+        "assets/images/app/app_homeCover_9_2.png"
+      ]
+    },
+    {
+      "userId": "2025300010",
+      "homeCover": "assets/images/app/app_homeCover_10_1.png",
+      "title": "Feeling beyond blessed today!",
+      "des": "This bouquet is not just a collection of flowers—it’s a bundle of love, kindness, and thoughtfulness wrapped in petals. 🌷💖 My heart is melting, and I can’t stop admiring them. Feeling beyond blessed today!",
+      "nickName": "Mia Donovan",
+      "avatar": "assets/images/app/app_avatar_10.png",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "picList": [
+        "assets/images/app/app_homeCover_10_1.png",
+        "assets/images/app/app_homeCover_10_2.png"
+      ]
+    },
+    {
+      "userId": "2025300011",
+      "homeCover": "assets/images/app/app_homeCover_11_1.png",
+      "title": "Thank you endlessly!",
+      "des": "If happiness had a scent, it would smell like fresh flowers. 🌿💐 Came home to this breathtaking bouquet, and I can’t stop staring at it. Whoever sent these, you just turned my day into something truly special. Thank you endlessly!",
+      "nickName": "Alexander Pierce",
+      "avatar": "assets/images/app/app_avatar_11.png",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "picList": [
+        "assets/images/app/app_homeCover_11_1.png",
+        "assets/images/app/app_homeCover_11_2.png"
+      ]
+    },
+    {
+      "userId": "2025300012",
+      "homeCover": "assets/images/app/app_homeCover_12_1.png",
+      "title": "I feel so seen, so loved, so appreciated. ",
+      "des": "Some days are just extra magical, and today is one of them! ✨ Received the most beautiful flowers, and I feel so seen, so loved, so appreciated. Thank you to the amazing person who made my day brighter! 🌸💛",
+      "nickName": "Amelia Brooks",
+      "avatar": "assets/images/app/app_avatar_12.png",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "picList": [
+        "assets/images/app/app_homeCover_12_1.png",
+        "assets/images/app/app_homeCover_12_2.png",
+        "assets/images/app/app_homeCover_12_3.png"
       ]
     }
   ],
@@ -19,10 +202,157 @@
     {
       "flowerId": "202530101",
       "homeCover": "assets/images/app/app_flower_1.png",
-      "title": "Pink Carnation",
-      "des": "An homage to first dates and love’s sweetest moments. This breathtaking hand bouquet blooms with tulips and veronica in blush pink complemented with creamy white hypericum berries. It is artfully wrapped in pink specialty paper and black satin ribbon.",
+      "title": "Carnation",
+      "des": "Enriching any garden's color scheme, Dianthus caryophyllus \"King of the Blacks' （Carnation） is an eye-catching，\nloosely-tufted, herbaceous perennial with a profusion of clove-scented, dark burgundy-red, double flowers, up to\n2 in. across （5 cm）， atop firm stems. Elegantly rising above a low mound of evergreen, gray-green, linear\nFoliage, the velvety, ruffled blossoms are produced in succession from late spring to mid-summer. Adding\ncontrast in the garden, this hardy carnation is perfect for the sunny border, and patio containers and makes\nexquisite and long-lasting cut flowers.",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
       "picList": [
         "assets/images/app/app_flower_1_1.png"
+      ]
+    },
+    {
+      "flowerId": "202530102",
+      "homeCover": "assets/images/app/app_flower_2.png",
+      "title": "Roses- The Best Plants to Grow in Your Garden",
+      "des": "A rose is one of the most beloved and iconic flowers in the world, with a history dating back thousands\nof years. Known for their exquisite beauty, alluring fragrance, and diverse range of colors and forms，\nroses have been culfivated for ornamental, medicinal, and culinary purposes across various cultures.\nBelonging to the genus Rosa within the family Rosaceae, there are over 300 species and thousands of\ncultivars, providing endless options for gardeners and enthusiasts to enjoy.\nRose flowers are typically classified into three main groups：\n\n• Wild roses are species roses of natural origin, often valued for their simplicity, hardiness, and\nability to attract pollinators.\n• Old garden roses, which predate the 1860s, include varieties such as Damasks, Albas, and\nBourbons, characterized by their strong fragrance and resilience.\n• Modern garden roses, developed after the 1860s, include Hybrid Teas, Floribundas，\nGrandifloras, and English roses prized for their vast color range, repeat blooming, and varied\ngrowth habits.\n\nRoses can be used in diverse ways within a garden, including as standalone specimens, in mixed\nborders, or as hedges for privacy. They can also be grown in containers, making them suitable for\nsmall spaces and urban environments.\nIn addition to their ornamental value, roses have various other uses. Rose petals are edible and can be\nused in culinary applications, such as making rose water, syrups, or jellies. Rose hips, the fruit\nproduced by some rose species, are rich in vitamin C and can be used to make teas, jams, and\nsupplements.",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "picList": [
+        "assets/images/app/app_flower_2_1.png"
+      ]
+    },
+    {
+      "flowerId": "202530103",
+      "homeCover": "assets/images/app/app_flower_3.png",
+      "title": "Clivia",
+      "des": "Other names of Clivia\nBig flower Clivia, big leaf Lycoris, sword leaf Lycoris, Damulan\n\nHabits of Clivia\nClivia is native to tropical areas in southern Africa. It grows under trees. It is afraid of heat and cold. It likes a semi-shaded and humid environment to avoid direct sunlight. The most suitable temperature for growth is between 18 and 28 degrees Celsius. If the temperature is too low or too low, the growth will be inhibited.\n\nClivia is suitable for growing in a well-ventilated environment and suitable for loose and fertile acidic organic soil.\n\nClivia is a typical greenhouse flower and is suitable for indoor cultivation.\n\nClivia under normal maintenance blooms once a year. The indoor maintenance temperature is suitable and it can bloom around the Spring Festival. However, it is rare to bloom twice or even three times a year!\n\nThe flower language of Clivia\nNoble, gentlemanly.",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "picList": [
+        "assets/images/app/app_flower_3_1.png"
+      ]
+    },
+    {
+      "flowerId": "202530104",
+      "homeCover": "assets/images/app/app_flower_4.png",
+      "title": "Tulip",
+      "des": "Tulip (scientific name: Tulipa×gesneriana L.) is a perennial bulbous flower of the genus Tulip in the Liliaceae family. It is also known as grass musk, dry lotus, foreign lotus, foreign narcissus, and Yuxiang. Tulips have bulbs. The leaves are linear-lanceolate to ovate-lanceolate. The flowers are single, terminal, large and gorgeous; the tepals are red or mixed with white and yellow, sometimes white or yellow. The flowering period is April-May. Originally produced in Europe, it was introduced and cultivated in China. It is a widely cultivated flower. Due to its long history, there are many varieties. Wild tulips are mostly distributed in hilly and mountainous areas, with an altitude of about 4,000 meters. They like a cool, humid, sunny and windproof growth environment. Tulips are world-famous bulbous flowers with extremely rich varieties and gorgeous colors. They are known as the \"Queen of Flowers in the World\" and are the national flowers of the Netherlands, Iran and other countries.",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "picList": [
+        "assets/images/app/app_flower_4_1.png"
+      ]
+    },
+    {
+      "flowerId": "202530105",
+      "homeCover": "assets/images/app/app_flower_5.png",
+      "title": "Orchids",
+      "des": "Orchids are a diverse and beautiful group of plants that come in a range of colors, shapes, and sizes.\nHere are some key facts and information about growing them：\nOrchid Family: Orchids are flowering plants found in almost every part of the world, from tropical\nrainforests to arid deserts. They belong to the Orchidaceae family which includes over 25,000\nspecies, making it one of the largest families of flowering plants.\nOrchid Types: Some popular types of orchid flowers include Phalaenepsis （Moth Orchid），\nCattleya （Corsage Orchid）， Dendrobium, and Oncidium （Dancing Lady Orchid）. Among the\nintriguing varieties, the Monkey Orchid and Yanilla Orchid stand out for their unique characteristics.\nThe Monkey Orchid, known for its striking resemblance to a monkey's face, thrives under specific\nconditions that mimic its native high-elevation cloud forests. The Vanilla Orchid, on the other hand, is\nfamed not just for its delicate flowers but also for producing vanilla pods, used widely in flavoring.\nOrchid Flowers: Orchids are prized for their exquisite flowers, which come in a variety of colors and\npatterns.\nGrowing Orchids: Depending on the species and growing conditions, they can be grown as\nhouseplants, in greenhouses, or in outdoor gardens，\nSome popular species of hardy orchids, including the lady's slipper orchid, the bee orchid, and\nthe bog _orchid, are a great addition to any garden. Unlike their tropical counterparts, they can tolerate\nfrost and require a period of cold dormancy to bloom successfully.\nOrchid care: I is crucial and varies significantly among species; for instance, the Orchid Cactus\nrequires a different approach, favoring a more arid environment similar to traditional cacti, which\ncontrasts with the more humid neeas of tropical orchias. Discover easy orchids to grow.",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "picList": [
+        "assets/images/app/app_flower_5_1.png"
+      ]
+    },
+    {
+      "flowerId": "202530106",
+      "homeCover": "assets/images/app/app_flower_6.png",
+      "title": "Narcissus （Daffodil）",
+      "des": "Daffodils are one of the most popular spring-flowering plants, known for their bright and cheerful\nblooms. A symbol of renewal and new beginnings, the daffodil flower is loved for its simplicity and\nelegance. If often blooms as one of the first signs of spring.\nIypes of daffodils vary widely, with over 40 species and thousands of culivars. They are categorized\ninto 13 divisions, including Trumpet Daffodils, Double Daffodils, Miniature Daffodils, or Jonguil\ndaffodils, each offering unique flower shapes and blooming times. Some are fragrant, while others\nare cherishea for their striking color combinations.\nDaffodils are perennial plants, meaning they come back year after year. Once planted, they\nrequire little maintenance and will naturalize, spreading over time to form larger clumps of flowers.\nThis makes them an excellent choice for long-term garden planning.\nWhen it comes to daffodil colors, the classic yellow daffodil is the most common, but these flowers\nalso come in shades of white, orange, pink, and even bicolored varieties. These color variations make\nthem versatile for any garden design, whether you're creating a monochromatic display or a more\nvibrant mix of flowers.\nDaffodils prefer well-drained soil and full to partial sun, making them relatively easy to grow in most\nclimates. They are planted in the fall and typically bloom in early spring. Daffodils also work well in\ncontainer gardens, adding a bright touch to patios or balconies.\nGreat companion plants for daffodils include tulips, hyacinths, crocuses, and muscari, which all\nbloom in early spring.\n\nDaffodils are toxic to pets （including cats and dogs） and humans if ingested. Handling them may\ncause skin irritation in sensitive indiviauals aue to calcium oxalate crystals in the plant's sap. Deer and\nrabbits avoid them due to their toxicity.",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "picList": [
+        "assets/images/app/app_flower_6_1.png"
+      ]
+    },
+    {
+      "flowerId": "202530107",
+      "homeCover": "assets/images/app/app_flower_7.png",
+      "title": "Hyacinthus （Hyacinth）",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "des": "Hyacinthus, commonly known as the hyacinth, is a fragrant and colorful spring-blooming bull with a\nrich history and variety of uses.\nOrigin and Spread: Native to the eastern Mediterranean, Hyacinthus species were first cultivated in\nthe Middle East and then made their way to Europe in the 16th century. By the 18th century, hyacinths\nhad become extremely popular in the Netherlands, where breeders developed hundreds of varieties.\nThe Netherlands remains the top producer of hyacinth bulbs today.\nFragrance and Symbolism: Hyacinths are celebrated for their intoxicating fragrance, which makes\nthem a popular choice in gardens and floral arrangements. Their strong scent is known to symbolize\npeace, beauty, and power. In the language of flowers, different hyacinth colors convey unique\nmeanings: purple represents sorrow, blue signifies sincerity, and white symbolizes purity.\nVarieties and Colors: Hyacinths come in a wide range of colors, including shades of blue, pink，\npurple, white, and yellow. The traditional Hyacinthus orientalis is the most commonly grown variety，\nwith its tightly packed, bell-shaped flowers that bloom in dense clusters on upright stalks.\nBloom time: Hyacinths typically bloom in early to mid-spring. Their flowers last for 2-3 weeks，\ndepending on weather conditions and care.\nUses: Hyacinth flowers look great in perennial borders and mixed with other spring flower bulbs such\nas daffodils, early double tulips, glory-of-the-snow, scilla, and grape hyacinth. They are also\ngreat candidates for patio containers or indoor pots where their fragrance and beauty can be enjoyed.\nHyacinths also make long-lasting cut flowers.\nToxicity: While hyacinths are beautiful and fragrant, they are also mildly toxic if ingested, particularly\nthe bulbs. The bulbs contain oxalic acid, which can cause irritation and stomach upset in humans and\nanimals if consumed. Proper care should be taken when planting or handling the bulbs.",
+      "picList": [
+        "assets/images/app/app_flower_7_1.png"
+      ]
+    },
+    {
+      "flowerId": "202530108",
+      "homeCover": "assets/images/app/app_flower_8.png",
+      "title": "Iris reticulata （Dwarf Iris）",
+      "des": "Iris reticulata, also known as the reticulatea iris or awarf iris, is a small flowering bulbous plant native\nto regions including Russia, the Caucasus, and Northern Iran. Its name 'reticulata' refers to the net-ike\nskin or \"unic' that covers the bulb.\nSize: This early spring bloomer has a compact growth habit, typically reaching a height and spread of\nabout 4-6 inches （10-15 cm）.\nFlowers: The flowers of lris reticulata are striking, characterized by deep purple-blue hues with a\nsplash of yellow or gold on the falls. Each flower displays the classic iris form, with three upward-\nstanding petals （standards） and three downward-curving petals （falls）.\nFragrance: A key fact about this iris is its fragrance. Unlike many other small spring bulbs, the\nreticulated iris has a subtle yet delightful scent, making it a pleasant surprise in the early spring\ngarden.\nBloom fime: Blooming occurs early in the year, often among the first signs of spring. If can even push\nthrough the snow in colder regions, bringing a welcome burst of color to the late winter garden.\nHardiness: The dwarf iris is haray in USDA zones 5-8. It prefers a sunny location with well-drained soil\nand can tolerate a variety of soil types.\nUses: These irises are often used for their ornamental value, adding early-season interest to gardens.\nTheir small size makes them a perfect fit for rock gardens, borders, or underplanting beneath\ndeciduous trees and shrubs. They are also ideal for container planting or naturalizing in lawns.\nPollinators: Iris reticulata is a valuable early nectar source for bees and other pollinators.\nDeer and rabbits: I's generally not a favored snack for deer and rabbits, and its bulbs are toxic if\ningested, which can deter these and other pests.",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "picList": [
+        "assets/images/app/app_flower_8_1.png"
+      ]
+    },
+    {
+      "flowerId": "202530109",
+      "homeCover": "assets/images/app/app_flower_9.png",
+      "title": "Chrysanthemum （Mums）",
+      "des": "Chrysanthemums or mums are sometimes referred to as the \"Queen of Fall Flowers.\" They are popular\nas ornamental plants, and there are over 40 species and thousands of cultivars of garden mums.\nMums are native to Asia and northeastern Europe and are the national flower of Japan.\nFlowers: One of the most striking features of mums is their bright, colorful blooms. The flower color\ncomes in a wide range of shades, including shades of pink, red, yellow, and white. The blooms are\ntypically large and daisy-like, with a central disk surrounded by petals. They can grow up to 6 inches\n（15 cm） in diameter, making them a popular choice for cut flower arrangements and as gifts for special\noccasions.\nBloom time: Garden mums typically bloom in the late summer to fall, usually from August to\nNovember, depending on the cultivar and growing conditions.\nSize: Some culivars can grow up to three feet tall （90cm）， while others are small and compact，\nmaking them suitable for container gardens.\nCut flowers: Mum flowers rank as one of the most popular cut flowers globally, following closely\nbehind roses. People often use them in floral arrangements, bouquets, corsages, and centerpieces.\nHardiness: In general, garden mums are hardy in USDA zones 5-9, but there are some cultivars that\ncan grow in colder or warmer zones.\nEasy to grow: Mums are commonly grown as annuals or perennials, and they prefer full sun and well-\ndrained soil.\nAir-purifier: The plants effectively purify the air and remove toxins from the environment.\nMedicinal properties: The plant contains compounds in its flowers and leaves that people have used\nfor centuries to treat various conditions, such as fever, headache, and inflammation.Additionally, it is\nbelieved that they possess anti-inflammatory and anti-bacterial properties.",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "picList": [
+        "assets/images/app/app_flower_9_1.png"
+      ]
+    },
+    {
+      "flowerId": "2025301010",
+      "homeCover": "assets/images/app/app_flower_10.png",
+      "title": "Paeonia （Peony）",
+      "des": "The Peony, or Paeonia, is a beloved perennial known for its large, showy blooms and lush foliage，\nmaking it a cornerstone in many gardens.\nOrigin and Species: Peonies are native to various regions, including Asia, Europe, and Western\nNorth America. This genus encompasses approximately 33 species, falling into two primary\ncategories: herbaceous perennials and deciduous shrubs.\nTypes and Varieties: Peony plants are broadly categorized into herbaceous, tree, and intersectional\ntypes. Herbaceous peonies die back to the ground each winter, while tree peonies retain a woody\nstructure year-round. Intersectional peonies, or Iitoh hybrids, are a cross between the two, offering the\nbest of both worlds.\nFlowers and Blooms: The charm of the peony lies in its large, offen fragrant flowers that appear in\nlate spring to early summer. They can vary in color from pink, red, white, yellow, and coral. The\nflowers, ranging from 2 to 12 inches in diameter, can be single, semi-double, or double, with the latter\nbeing especially popular for their full, luxurious appearance.\nGrowth and Care: Peonies thrive in well-drained soil and full sun to partial shade. They are hardy in\nUSDA zones 3.9 and prefer a temperate climate. They require minimal maintenance but benefit from\noccasional fertilization and deadheading after blooming. Master the art of growing and caring for\npeonies.\nLongevity and Uses: One of the most remarkable aspects of peonies is their longevity; they can live\nand thrive for decades in the same location. They are widely used in landscaping for their aesthetic\nappeal and are prized as cut flowers due to their beauty and long vase life.\nSymbolism Peonies carry rich symbolic meanings, often associated with romance, prosperity, and\ngood fortune. They are also known for their medicinal properties in fraditional Chinese medicine.",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "picList": [
+        "assets/images/app/app_flower_10_1.png"
+      ]
+    },
+    {
+      "flowerId": "2025301011",
+      "homeCover": "assets/images/app/app_flower_11.png",
+      "title": "Helianthus （Sunflower）",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "des": "The Sunflower, botanically known as Helianthus, belongs to a diverse genus encompassing both\nannual and perennial plants, famed for their striking, sun-like flower heads. These iconic blooms have\nestablished Helianthus as a beloved symbol of warmth, happiness, and the essence of summer.\nHabit: Sunflowers exhibit a wide range of growth habits. Annual varieties like Helianthus annuus can\ngrow from seed to flower in one season. Perennial species, on the other hand, return year after year，\nslowly expanding their clumps. They range from dwarf varieties, suitable for small spaces and\ncontainer gardening, to massive culfivars reaching over 10 feet tall. Learn how to choose the\nperfect sunflower for your garden and pots.\nHardiness: Each spring, gardeners generally plant annual sunflowers as seeds, and they rapidly grow，\nthriving in a range of well-drained soil types. Perennial sunflowers are often hardy in USDA zones 4\nthrough 9, tolerating a wider range of climatic conditions, from intense summer heat to cold winters.\nFlowers and Bloom Time: Sunflowers are renowned for their large, vibrant flowers, usually bright\nyellow with a prominent central disc. The bloom time varies among species and culivars but generally\nfalls from mid-summer to early fall. Some varieties feature single large blooms, while others produce\nmultiple smaller flowers.\nUses: Sunflower plants are widely grown in gardens for ornamental purposes. The larger varieties can\nact as natural privacy screens or garden backdrops. In agriculture, sunflowers are culfivated for their\nseeds and harvested for oil and food. Additionally, they are popular in sunflower bouquets, especially\nthe pollen-free varieties that don't shed and cause less mess indoors.\nBenefits: Sunflower plants attract bees, butterflies and their sunflower seeds are a food source for\nbiras. They are not toxic to humans or pets. Sunflowers can also extract heavy metals and toxins from\nthe soil, making them valuable for rehabilitating polluted areas. Discover 10 compelling reasons to\ngrow a sunflower in your garden.",
+      "picList": [
+        "assets/images/app/app_flower_11_1.png"
+      ]
+    },
+    {
+      "flowerId": "2025301012",
+      "homeCover": "assets/images/app/app_flower_12.png",
+      "title": "Lilium （Lily）",
+      "des": "Lilium, commonly known as the lily, is a captivating group of perennial flowering plants that belong to\nthe Liliaceae family. With over 100 lily species and numerous hybrids, they offer a diverse array of\ncolors, shapes, and sizes, making them an alluring addition to any garden or floral arrangement.\nLily flowers: They are prized for their striking, trumpet-shaped blooms that come in various colors，\nincluding white, yellow, pink, red, orange, and purple. Some lilies have bicolor or speckled patterns，\nadding to their visual appeal. The flowers can be upward-facing, outward-facing, or pendant\n（downward-facing）， depending on the variety.\nFragrance: Lilies also vary in terms of fragrance, with some, like Oriental lilies, being heavily scented，\nwhile others, such as Asiatic lilies, have litle to no fragrance.\nBlooming season: The lily blooming season ranges from mid-spring to early fall, depending on the\nspecific variety and local climate.\nGrowth habit: Lilies are herbaceous perennials that grow from underground bulbs. They have a\nvertical growth habit, with most varieties growing between 2-6 feet （60-180 cm） tall, although some\ndwarf varieties and species lilies may be shorter, and certain hybrids can grow taller.\nLily types: Lily plants can be classified into several groups, including Asiatic, Oriental, Trumpet，\nMartagon, and species lilies, each with its unique features and characteristics.\nHardiness: Lilies exhibit a range of hardiness levels, with most varieties falling between USDA\nHardiness Zones 3 to 9.\nUses: Lily plants have a variety of uses in landscaping and floral arrangements. They are popular for\nadding vertical interest and vibrant colors to garden beds, borders, and mixed perennial gardens. Lily\nflowers also make excellent cut flowers, with their striking blooms and, in some cases, delightful\nfragrance, adding elegance to bouquets and arrangements. They can be planted in containers as well，\nallowing for versatile placement and easy rearrangement.\n\nCulture: Lily bulbs prefer well-draining, fertile soil with a slightly acidic to neutral pH （6.0.-7.0）. They\nthrive in locations that receive at least 6 hours of sunlight per day, although some varieties can tolerate\npartial shade.\nSymbol: Lilies hold symbolic significance in various cultures and throughout history, often\nrepresenting purity, innocence, rebirth, and motherhood. Their enchanting beauty and versatile nature\nmake lilies a beloved choice for gardens, bouquets, and special occasions.",
+      "isFollowed": "false",
+      "isCollected": "false",
+      "isLiked": "false",
+      "isBlacked": "false",
+      "picList": [
+        "assets/images/app/app_flower_12_1.png"
       ]
     }
   ]

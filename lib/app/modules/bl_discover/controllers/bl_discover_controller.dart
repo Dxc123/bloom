@@ -63,6 +63,11 @@ class BlDiscoverController extends GetxController {
         isCollected: false,
         callback: () {},
       );
+      await BlMediaRepository.to.updateIsLikedOneAnchor(
+        userId: item.userId ?? "",
+        isLiked: false,
+        callback: () {},
+      );
       removeMedia(userId: item.userId ?? "");
     });
   }
@@ -88,6 +93,11 @@ class BlDiscoverController extends GetxController {
             userId: item.userId ?? "",
             isFocused: false,
             callback: () async {},
+          );
+          await BlMediaRepository.to.updateIsLikedOneAnchor(
+            userId: item.userId ?? "",
+            isLiked: false,
+            callback: () {},
           );
           removeMedia(userId: item.userId ?? "");
         });
@@ -123,6 +133,23 @@ class BlDiscoverController extends GetxController {
             return element.userId == item.userId;
           });
           item.isCollected = !isCollected;
+          dataList22.insert(index, item);
+        });
+  }
+
+  void onLike({required BlUserDbEntity item, required int index}) async {
+    EasyLoading.show(status: "loading...");
+    await Future.delayed(const Duration(milliseconds: 200));
+    EasyLoading.dismiss();
+    bool isLiked = item.isLiked ?? false;
+    await BlMediaRepository.to.updateIsLikedOneAnchor(
+        userId: item.userId ?? "",
+        isLiked: !isLiked,
+        callback: () async {
+          dataList22.removeWhere((element) {
+            return element.userId == item.userId;
+          });
+          item.isLiked = !isLiked;
           dataList22.insert(index, item);
         });
   }

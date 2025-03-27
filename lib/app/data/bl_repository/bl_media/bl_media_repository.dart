@@ -26,7 +26,16 @@ class BlMediaRepository extends GetxController {
   // BlFlowerDbEntity
   //   查找缓存的所有Flowers数据
   Future<List<BlFlowerDbEntity>?> findAllFlowerMedia() async {
-    List<BlFlowerDbEntity>? flowerMedias = await BlRepositoryManager.to.isar.blFlowerDbEntitys.where().myIdEqualTo(currentUserId).filter().isBlackedEqualTo(false).findAll();
+    List<BlFlowerDbEntity>? flowerMedias = await BlRepositoryManager.to.isar.blFlowerDbEntitys
+        .where()
+        .myIdEqualTo(
+          currentUserId,
+        )
+        .filter()
+        .isBlackedEqualTo(
+          false,
+        )
+        .findAll();
     return flowerMedias;
   }
 
@@ -34,7 +43,18 @@ class BlMediaRepository extends GetxController {
   StreamSubscription<List<BlFlowerDbEntity>> findAllFlowerMediaStream({
     required Function(int, List<BlFlowerDbEntity>) callback,
   }) {
-    Stream<List<BlFlowerDbEntity>> stream = BlRepositoryManager.to.isar.blFlowerDbEntitys.where().myIdEqualTo(currentUserId).watch(fireImmediately: true);
+    Stream<List<BlFlowerDbEntity>> stream = BlRepositoryManager.to.isar.blFlowerDbEntitys
+        .where()
+        .myIdEqualTo(
+          currentUserId,
+        )
+        .filter()
+        .isBlackedEqualTo(
+          false,
+        )
+        .watch(
+          fireImmediately: true,
+        );
     return stream.listen((event) {
       BlLogger.debug("Flowers数据发生变化 最新数量为${event.length}");
       callback.call(event.length, event);
@@ -43,7 +63,14 @@ class BlMediaRepository extends GetxController {
 
   //查找缓存的一条Flowers数据
   Future<BlFlowerDbEntity?> findOneFlowerMedia({required String flowerId}) async {
-    BlFlowerDbEntity? flowerMedia = await BlRepositoryManager.to.isar.blFlowerDbEntitys.where().myIdEqualTo(currentUserId).filter().flowerIdEqualTo(flowerId).findFirst();
+    BlFlowerDbEntity? flowerMedia = await BlRepositoryManager.to.isar.blFlowerDbEntitys
+        .where()
+        .myIdEqualTo(currentUserId)
+        .filter()
+        .flowerIdEqualTo(
+          flowerId,
+        )
+        .findFirst();
     return flowerMedia;
   }
 
@@ -152,7 +179,14 @@ class BlMediaRepository extends GetxController {
 
   // 是否拉黑了某一条Flowers数据
   bool findBlackedOneFlowerMedia({required String flowerId}) {
-    BlFlowerDbEntity? flowerMedia = BlRepositoryManager.to.isar.blFlowerDbEntitys.where().myIdEqualTo(currentUserId).filter().flowerIdEqualTo(flowerId).findFirstSync();
+    BlFlowerDbEntity? flowerMedia = BlRepositoryManager.to.isar.blFlowerDbEntitys
+        .where()
+        .myIdEqualTo(currentUserId)
+        .filter()
+        .flowerIdEqualTo(
+          flowerId,
+        )
+        .findFirstSync();
     return flowerMedia?.isBlacked ?? false;
   }
 
@@ -165,6 +199,7 @@ class BlMediaRepository extends GetxController {
     BlFlowerDbEntity? flowerMedia = await findOneFlowerMedia(flowerId: flowerId);
     if (flowerMedia != null) {
       flowerMedia.isBlacked = isBlacked;
+      flowerMedia.updatedAt = DateTime.now().millisecondsSinceEpoch;
       await BlRepositoryManager.to.isar.writeTxn(() async {
         await BlRepositoryManager.to.isar.blFlowerDbEntitys.put(flowerMedia);
       }).then((value) {
@@ -176,7 +211,14 @@ class BlMediaRepository extends GetxController {
 
   // 查找所有拉黑的Flowers数据
   Future<List<BlFlowerDbEntity>?> findAllBlackedFlowerMedia() async {
-    List<BlFlowerDbEntity>? flowerMedias = await BlRepositoryManager.to.isar.blFlowerDbEntitys.where().myIdEqualTo(currentUserId).filter().isBlackedEqualTo(true).findAll();
+    List<BlFlowerDbEntity>? flowerMedias = await BlRepositoryManager.to.isar.blFlowerDbEntitys
+        .where()
+        .myIdEqualTo(currentUserId)
+        .filter()
+        .isBlackedEqualTo(
+          true,
+        )
+        .findAll();
     return flowerMedias;
   }
 
@@ -184,7 +226,16 @@ class BlMediaRepository extends GetxController {
   StreamSubscription<List<BlFlowerDbEntity>> findAllBlackedFlowerMediaStream({
     required Function(int, List<BlFlowerDbEntity>) callback,
   }) {
-    return BlRepositoryManager.to.isar.blFlowerDbEntitys.where().myIdEqualTo(currentUserId).filter().isBlackedEqualTo(true).build().watch(fireImmediately: true).listen((event) {
+    return BlRepositoryManager.to.isar.blFlowerDbEntitys
+        .where()
+        .myIdEqualTo(currentUserId)
+        .filter()
+        .isBlackedEqualTo(true)
+        .build()
+        .watch(
+          fireImmediately: true,
+        )
+        .listen((event) {
       BlLogger.debug("拉黑的Flowers数据发生变化 最新数量为${event.length}");
       callback.call(event.length, event);
     });
@@ -194,11 +245,18 @@ class BlMediaRepository extends GetxController {
 
   // 是否收藏了某一条Flowers数据
   bool findCollectedOneFlowerMedia({required String flowerId}) {
-    BlFlowerDbEntity? flowerMedia = BlRepositoryManager.to.isar.blFlowerDbEntitys.where().myIdEqualTo(currentUserId).filter().flowerIdEqualTo(flowerId).findFirstSync();
+    BlFlowerDbEntity? flowerMedia = BlRepositoryManager.to.isar.blFlowerDbEntitys
+        .where()
+        .myIdEqualTo(currentUserId)
+        .filter()
+        .flowerIdEqualTo(
+          flowerId,
+        )
+        .findFirstSync();
     return flowerMedia?.isCollected ?? false;
   }
 
-  //根据isCollected 更新是否收藏一条Flowers数据
+  //更新是否收藏一条Flowers数据
   Future<void> updateIsCollectedOneFlowerMedia({
     required String flowerId,
     required bool isCollected,
@@ -207,6 +265,7 @@ class BlMediaRepository extends GetxController {
     BlFlowerDbEntity? flowerMedia = await findOneFlowerMedia(flowerId: flowerId);
     if (flowerMedia != null) {
       flowerMedia.isCollected = isCollected;
+      flowerMedia.updatedAt = DateTime.now().millisecondsSinceEpoch;
       await BlRepositoryManager.to.isar.writeTxn(() async {
         await BlRepositoryManager.to.isar.blFlowerDbEntitys.put(flowerMedia);
       }).then((value) {
@@ -218,7 +277,15 @@ class BlMediaRepository extends GetxController {
 
   // 查找所有收藏的Flowers数据
   Future<List<BlFlowerDbEntity>?> findAllCollectedFlowerMedia() async {
-    List<BlFlowerDbEntity>? flowerMedias = await BlRepositoryManager.to.isar.blFlowerDbEntitys.where().myIdEqualTo(currentUserId).filter().isCollectedEqualTo(true).isBlackedEqualTo(false).findAll();
+    List<BlFlowerDbEntity>? flowerMedias = await BlRepositoryManager.to.isar.blFlowerDbEntitys
+        .where()
+        .myIdEqualTo(currentUserId)
+        .filter()
+        .isCollectedEqualTo(true)
+        .isBlackedEqualTo(
+          false,
+        )
+        .findAll();
     return flowerMedias;
   }
 
@@ -226,7 +293,16 @@ class BlMediaRepository extends GetxController {
   StreamSubscription<List<BlFlowerDbEntity>> findAllCollectedFlowerMediaStream({
     required Function(int, List<BlFlowerDbEntity>) callback,
   }) {
-    return BlRepositoryManager.to.isar.blFlowerDbEntitys.where().myIdEqualTo(currentUserId).filter().isCollectedEqualTo(true).isBlackedEqualTo(false).build().watch(fireImmediately: true).listen((event) {
+    return BlRepositoryManager.to.isar.blFlowerDbEntitys
+        .where()
+        .myIdEqualTo(currentUserId)
+        .filter()
+        .isCollectedEqualTo(true)
+        .build()
+        .watch(
+          fireImmediately: true,
+        )
+        .listen((event) {
       BlLogger.debug("收藏的Flowers数据发生变化 最新数量为${event.length}");
       callback.call(event.length, event);
     });
@@ -368,13 +444,29 @@ class BlMediaRepository extends GetxController {
   /////////////////////////////////////////
   // 查找某个主播的缓存记录
   Future<BlUserDbEntity?> findOneAnchor({required String userId}) async {
-    BlUserDbEntity? anchor = await BlRepositoryManager.to.isar.blUserDbEntitys.where().myIdEqualTo(currentUserId).filter().userIdEqualTo(userId).findFirst();
+    BlUserDbEntity? anchor = await BlRepositoryManager.to.isar.blUserDbEntitys
+        .where()
+        .myIdEqualTo(currentUserId)
+        .filter()
+        .userIdEqualTo(
+          userId,
+        )
+        .findFirst();
     return anchor;
   }
 
   // 查找缓存的所有主播数据
   Future<List<BlUserDbEntity>?> findAllAnchor() async {
-    List<BlUserDbEntity>? anchors = await BlRepositoryManager.to.isar.blUserDbEntitys.where().myIdEqualTo(currentUserId).filter().isBlackedEqualTo(false).findAll();
+    List<BlUserDbEntity>? anchors = await BlRepositoryManager.to.isar.blUserDbEntitys
+        .where()
+        .myIdEqualTo(
+          currentUserId,
+        )
+        .filter()
+        .isBlackedEqualTo(
+          false,
+        )
+        .findAll();
     return anchors;
   }
 
@@ -382,7 +474,18 @@ class BlMediaRepository extends GetxController {
   StreamSubscription<List<BlUserDbEntity>> findAllAnchorStream({
     required Function(int, List<BlUserDbEntity>) callback,
   }) {
-    return BlRepositoryManager.to.isar.blUserDbEntitys.where().myIdEqualTo(currentUserId).build().watch(fireImmediately: true).listen((event) {
+    return BlRepositoryManager.to.isar.blUserDbEntitys
+        .where()
+        .myIdEqualTo(currentUserId)
+        .filter()
+        .isBlackedEqualTo(
+          false,
+        )
+        .build()
+        .watch(
+          fireImmediately: true,
+        )
+        .listen((event) {
       BlLogger.debug("缓存的主播发生变化 最新数量为${event.length}");
       callback.call(event.length, event);
     });
@@ -392,15 +495,33 @@ class BlMediaRepository extends GetxController {
 
 //   查找缓存的所有主播中的点赞数据
   Future<List<BlUserDbEntity>?> findAllLikedAnchor() async {
-    List<BlUserDbEntity>? anchors = await BlRepositoryManager.to.isar.blUserDbEntitys.where().myIdEqualTo(currentUserId).filter().isLikedEqualTo(true).isBlackedEqualTo(false).findAll();
+    List<BlUserDbEntity>? anchors = await BlRepositoryManager.to.isar.blUserDbEntitys
+        .where()
+        .myIdEqualTo(currentUserId)
+        .filter()
+        .isLikedEqualTo(true)
+        .isBlackedEqualTo(
+          false,
+        )
+        .findAll();
     return anchors;
   }
 
   // 实时监听缓存的所有主播中点赞数据的数量变化
-  StreamSubscription<List<BlUserDbEntity>> findAllLikedAnchorCountStream({
+  StreamSubscription<List<BlUserDbEntity>> findAllLikedAnchorStream({
     required Function(int, List<BlUserDbEntity>) callback,
   }) {
-    return BlRepositoryManager.to.isar.blUserDbEntitys.where().myIdEqualTo(currentUserId).filter().isLikedEqualTo(true).isBlackedEqualTo(false).build().watch(fireImmediately: true).listen((event) {
+    return BlRepositoryManager.to.isar.blUserDbEntitys
+        .where()
+        .myIdEqualTo(currentUserId)
+        .filter()
+        .isLikedEqualTo(true)
+        .isBlackedEqualTo(false)
+        .build()
+        .watch(
+          fireImmediately: true,
+        )
+        .listen((event) {
       BlLogger.debug("点赞主播发生变化 最新数量为${event.length}");
       callback.call(event.length, event);
     });
@@ -408,15 +529,27 @@ class BlMediaRepository extends GetxController {
 
   //   查找是否点赞某个主播 isLiked
   bool findLikedOneAnchor({required String userId}) {
-    BlUserDbEntity? anchor = BlRepositoryManager.to.isar.blUserDbEntitys.where().myIdEqualTo(currentUserId).filter().userIdEqualTo(userId).findFirstSync();
+    BlUserDbEntity? anchor = BlRepositoryManager.to.isar.blUserDbEntitys
+        .where()
+        .myIdEqualTo(currentUserId)
+        .filter()
+        .userIdEqualTo(
+          userId,
+        )
+        .findFirstSync();
     return anchor?.isLiked ?? false;
   }
 
   //   更新某个主播的点赞状态
-  Future<void> updateIsLikedOneAnchor({required String userId, required bool isLiked, required Function callback}) async {
+  Future<void> updateIsLikedOneAnchor({
+    required String userId,
+    required bool isLiked,
+    required Function callback,
+  }) async {
     BlUserDbEntity? anchor = await findOneAnchor(userId: userId);
     if (anchor != null) {
       anchor.isLiked = isLiked;
+      anchor.updatedAt = DateTime.now().millisecondsSinceEpoch;
       await BlRepositoryManager.to.isar.writeTxn(() async {
         await BlRepositoryManager.to.isar.blUserDbEntitys.put(anchor);
       }).then((value) {
@@ -431,7 +564,15 @@ class BlMediaRepository extends GetxController {
 /////////收藏相关
 //   查找缓存的所有主播中的收藏数据
   Future<List<BlUserDbEntity>?> findAllCollectedAnchor() async {
-    List<BlUserDbEntity>? anchors = await BlRepositoryManager.to.isar.blUserDbEntitys.where().myIdEqualTo(currentUserId).filter().isCollectedEqualTo(true).isBlackedEqualTo(false).findAll();
+    List<BlUserDbEntity>? anchors = await BlRepositoryManager.to.isar.blUserDbEntitys
+        .where()
+        .myIdEqualTo(currentUserId)
+        .filter()
+        .isCollectedEqualTo(true)
+        .isBlackedEqualTo(
+          false,
+        )
+        .findAll();
     return anchors;
   }
 
@@ -439,7 +580,17 @@ class BlMediaRepository extends GetxController {
   StreamSubscription<List<BlUserDbEntity>> findAllCollectedAnchorStream({
     required Function(int, List<BlUserDbEntity>) callback,
   }) {
-    return BlRepositoryManager.to.isar.blUserDbEntitys.where().myIdEqualTo(currentUserId).filter().isCollectedEqualTo(true).isBlackedEqualTo(false).build().watch(fireImmediately: true).listen((event) {
+    return BlRepositoryManager.to.isar.blUserDbEntitys
+        .where()
+        .myIdEqualTo(currentUserId)
+        .filter()
+        .isCollectedEqualTo(true)
+        .isBlackedEqualTo(false)
+        .build()
+        .watch(
+          fireImmediately: true,
+        )
+        .listen((event) {
       BlLogger.debug("收藏主播发生变化 最新数量为${event.length}");
       callback.call(event.length, event);
     });
@@ -447,15 +598,29 @@ class BlMediaRepository extends GetxController {
 
   //   查找是否收藏某个主播 isCollected
   Future<bool> findCollectedOneAnchor({required String userId}) async {
-    bool isCollected = await BlRepositoryManager.to.isar.blUserDbEntitys.where().myIdEqualTo(currentUserId).filter().userIdEqualTo(userId).isCollectedEqualTo(true).findFirst() != null;
+    bool isCollected = await BlRepositoryManager.to.isar.blUserDbEntitys
+            .where()
+            .myIdEqualTo(currentUserId)
+            .filter()
+            .userIdEqualTo(userId)
+            .isCollectedEqualTo(
+              true,
+            )
+            .findFirst() !=
+        null;
     return isCollected;
   }
 
 //   更新某个主播的收藏状态
-  Future<void> updateIsCollectedOneAnchor({required String userId, required bool isCollected, required Function callback}) async {
+  Future<void> updateIsCollectedOneAnchor({
+    required String userId,
+    required bool isCollected,
+    required Function callback,
+  }) async {
     BlUserDbEntity? anchor = await findOneAnchor(userId: userId);
     if (anchor != null) {
       anchor.isCollected = isCollected;
+      anchor.updatedAt = DateTime.now().millisecondsSinceEpoch;
       await BlRepositoryManager.to.isar.writeTxn(() async {
         await BlRepositoryManager.to.isar.blUserDbEntitys.put(anchor);
       }).then((value) {
@@ -470,7 +635,15 @@ class BlMediaRepository extends GetxController {
 /////////关注相关
 // 查找缓存的所有主播中的关注数据
   Future<List<BlUserDbEntity>?> findAllFocusAnchor() async {
-    List<BlUserDbEntity>? anchors = await BlRepositoryManager.to.isar.blUserDbEntitys.where().myIdEqualTo(currentUserId).filter().isFollowedEqualTo(true).isBlackedEqualTo(false).findAll();
+    List<BlUserDbEntity>? anchors = await BlRepositoryManager.to.isar.blUserDbEntitys
+        .where()
+        .myIdEqualTo(currentUserId)
+        .filter()
+        .isFollowedEqualTo(true)
+        .isBlackedEqualTo(
+          false,
+        )
+        .findAll();
     return anchors;
   }
 
@@ -478,7 +651,17 @@ class BlMediaRepository extends GetxController {
   StreamSubscription<List<BlUserDbEntity>> findAllFocusAnchorStream({
     required Function(int, List<BlUserDbEntity>) callback,
   }) {
-    return BlRepositoryManager.to.isar.blUserDbEntitys.where().myIdEqualTo(currentUserId).filter().isFollowedEqualTo(true).isBlackedEqualTo(false).build().watch(fireImmediately: true).listen((event) {
+    return BlRepositoryManager.to.isar.blUserDbEntitys
+        .where()
+        .myIdEqualTo(currentUserId)
+        .filter()
+        .isFollowedEqualTo(true)
+        .isBlackedEqualTo(false)
+        .build()
+        .watch(
+          fireImmediately: true,
+        )
+        .listen((event) {
       BlLogger.debug("关注主播发生变化 最新数量为${event.length}");
       callback.call(event.length, event);
     });
@@ -486,7 +669,16 @@ class BlMediaRepository extends GetxController {
 
 //   查找是否关注某个主播 isFollowed
   bool findFocusedOneAnchor({required String userId}) {
-    bool isFocused = BlRepositoryManager.to.isar.blUserDbEntitys.where().myIdEqualTo(currentUserId).filter().userIdEqualTo(userId).isFollowedEqualTo(true).findFirstSync() != null;
+    bool isFocused = BlRepositoryManager.to.isar.blUserDbEntitys
+            .where()
+            .myIdEqualTo(currentUserId)
+            .filter()
+            .userIdEqualTo(userId)
+            .isFollowedEqualTo(
+              true,
+            )
+            .findFirstSync() !=
+        null;
     return isFocused;
   }
 
@@ -495,17 +687,32 @@ class BlMediaRepository extends GetxController {
     required String userId,
     required Function(bool) callback,
   }) {
-    return BlRepositoryManager.to.isar.blUserDbEntitys.where().myIdEqualTo(currentUserId).filter().userIdEqualTo(userId).isFollowedEqualTo(true).build().watch(fireImmediately: true).listen((event) {
+    return BlRepositoryManager.to.isar.blUserDbEntitys
+        .where()
+        .myIdEqualTo(currentUserId)
+        .filter()
+        .userIdEqualTo(userId)
+        .isFollowedEqualTo(true)
+        .build()
+        .watch(
+          fireImmediately: true,
+        )
+        .listen((event) {
       BlLogger.debug("关注主播发生变化 ${event.first.isFollowed}");
       callback.call(event.first.isFollowed == true);
     });
   }
 
   // 更新某个主播的关注状态
-  Future<void> updateIsFocusedOneAnchor({required String userId, required bool isFocused, required Function callback}) async {
+  Future<void> updateIsFocusedOneAnchor({
+    required String userId,
+    required bool isFocused,
+    required Function callback,
+  }) async {
     BlUserDbEntity? anchor = await findOneAnchor(userId: userId);
     if (anchor != null) {
       anchor.isFollowed = isFocused;
+      anchor.updatedAt = DateTime.now().millisecondsSinceEpoch;
       await BlRepositoryManager.to.isar.writeTxn(() async {
         await BlRepositoryManager.to.isar.blUserDbEntitys.put(anchor);
       }).then((value) {
@@ -520,7 +727,14 @@ class BlMediaRepository extends GetxController {
 /////////拉黑相关
 // 查找缓存的所有主播中的拉黑数据
   Future<List<BlUserDbEntity>?> findAllBlackedAnchor() async {
-    List<BlUserDbEntity>? anchors = await BlRepositoryManager.to.isar.blUserDbEntitys.where().myIdEqualTo(currentUserId).filter().isBlackedEqualTo(true).findAll();
+    List<BlUserDbEntity>? anchors = await BlRepositoryManager.to.isar.blUserDbEntitys
+        .where()
+        .myIdEqualTo(currentUserId)
+        .filter()
+        .isBlackedEqualTo(
+          true,
+        )
+        .findAll();
     return anchors;
   }
 
@@ -528,7 +742,16 @@ class BlMediaRepository extends GetxController {
   StreamSubscription<List<BlUserDbEntity>> findAllBlackedAnchorStream({
     required Function(int, List<BlUserDbEntity>) callback,
   }) {
-    return BlRepositoryManager.to.isar.blUserDbEntitys.where().myIdEqualTo(currentUserId).filter().isBlackedEqualTo(true).build().watch(fireImmediately: true).listen((event) {
+    return BlRepositoryManager.to.isar.blUserDbEntitys
+        .where()
+        .myIdEqualTo(currentUserId)
+        .filter()
+        .isBlackedEqualTo(true)
+        .build()
+        .watch(
+          fireImmediately: true,
+        )
+        .listen((event) {
       BlLogger.debug("拉黑主播发生变化 最新数量为${event.length}");
       callback.call(event.length, event);
     });
@@ -536,11 +759,19 @@ class BlMediaRepository extends GetxController {
 
 //   查找是否拉黑某个主播 isBlack
   bool findBlackOneAnchor({required String userId}) {
-    BlUserDbEntity? anchor = BlRepositoryManager.to.isar.blUserDbEntitys.where().myIdEqualTo(currentUserId).filter().userIdEqualTo(userId).isBlackedEqualTo(true).findFirstSync();
+    BlUserDbEntity? anchor = BlRepositoryManager.to.isar.blUserDbEntitys
+        .where()
+        .myIdEqualTo(currentUserId)
+        .filter()
+        .userIdEqualTo(userId)
+        .isBlackedEqualTo(
+          true,
+        )
+        .findFirstSync();
     return anchor != null;
   }
 
-  //   更新某个主播的l拉黑状态
+  //   更新某个主播的拉黑状态
   Future<void> updateIsBlackOneAnchor({
     required String userId,
     required bool isBlack,
@@ -549,6 +780,7 @@ class BlMediaRepository extends GetxController {
     BlUserDbEntity? anchor = await findOneAnchor(userId: userId);
     if (anchor != null) {
       anchor.isBlacked = isBlack;
+      anchor.updatedAt = DateTime.now().millisecondsSinceEpoch;
       await BlRepositoryManager.to.isar.writeTxn(() async {
         await BlRepositoryManager.to.isar.blUserDbEntitys.put(anchor);
       }).then((value) {

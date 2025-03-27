@@ -31,4 +31,21 @@ class BlUserDbEntity {
   bool? isLiked;
   // 是否被拉黑
   bool? isBlacked;
+
+  BlUserDbEntity({
+    this.myId,
+    this.createdAt,
+    this.updatedAt,
+    this.userId,
+    this.homeCover,
+    this.title,
+    this.des,
+    this.nickName,
+    this.avatar,
+    this.picList,
+    this.isFollowed= false,
+    this.isCollected= false,
+    this.isLiked= false,
+    this.isBlacked= false,
+});
 }

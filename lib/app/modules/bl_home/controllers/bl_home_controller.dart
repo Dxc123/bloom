@@ -19,9 +19,9 @@ class BlHomeController extends GetxController {
       dataList.clear();
       dataList.value = list;
     });
-    Future.delayed(const Duration(milliseconds: 200), () {
-      onRefresh(loading: true);
-    });
+    // Future.delayed(const Duration(milliseconds: 200), () {
+    //   onRefresh(loading: true);
+    // });
   }
 
   @override
@@ -36,9 +36,10 @@ class BlHomeController extends GetxController {
     }
     await Future.delayed(const Duration(seconds: 1));
     EasyLoading.dismiss();
-    dataList.value = BlLoadDataService.to.shuffleFlowerList(
-      await BlMediaRepository.to.findAllFlowerMedia() ?? [],
-    );
+    // dataList.value = BlLoadDataService.to.shuffleFlowerList(
+    //   await BlMediaRepository.to.findAllFlowerMedia() ?? [],
+    // );
+    dataList.value = await BlMediaRepository.to.findAllFlowerMedia() ?? [];
     BlLogger.debug("dataList = ${dataList.length}");
   }
 

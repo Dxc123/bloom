@@ -53,12 +53,6 @@ class _BlHomeViewState extends State<BlHomeView> with AutomaticKeepAliveClientMi
                 SliverPadding(
                   padding: const EdgeInsetsDirectional.symmetric(horizontal: 16),
                   sliver: SliverGrid(
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      mainAxisSpacing: 10,
-                      crossAxisSpacing: 10,
-                      childAspectRatio: 1.0,
-                    ),
                     delegate: SliverChildBuilderDelegate(
                       (context, index) {
                         final BlFlowerDbEntity entity = controller.dataList[index];
@@ -66,45 +60,22 @@ class _BlHomeViewState extends State<BlHomeView> with AutomaticKeepAliveClientMi
                           onTap: () {
                             Get.toNamed(Routes.BL_HOME_DETAIL, arguments: entity);
                           },
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                          child: Stack(
                             children: [
-                              Expanded(
-                                flex: 8,
-                                child: Stack(
-                                  children: [
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(24),
-                                      child: Image.asset(
-                                        entity.homeCover ?? "",
-                                        fit: BoxFit.fill,
-                                        height: 260,
-                                      ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(12),
+                                    child: Image.asset(
+                                      entity.homeCover ?? "",
+                                      fit: BoxFit.cover,
+                                      height: 148,
+                                      width: (Get.width - 20 * 2 - 10) / 2,
                                     ),
-                                    PositionedDirectional(
-                                      top: 15,
-                                      end: 15,
-                                      child: InkWell(
-                                        onTap: () {
-                                          controller.onCollect(item: entity, index: index);
-                                        },
-                                        child: Image.asset(
-                                          (entity.isCollected ?? false) ? "assets/images/app/bl_home_like_select.png" : "assets/images/app/bl_home_like_normal.png",
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Expanded(
-                                flex: 2,
-                                child: Container(
-                                  height: 40,
-                                  alignment: AlignmentDirectional.centerStart,
-                                  padding: const EdgeInsetsDirectional.symmetric(horizontal: 10),
-                                  child: Text(
+                                  ),
+                                  const SizedBox(height: 5),
+                                  Text(
                                     entity.title ?? "",
                                     maxLines: 3,
                                     overflow: TextOverflow.ellipsis,
@@ -113,14 +84,33 @@ class _BlHomeViewState extends State<BlHomeView> with AutomaticKeepAliveClientMi
                                       fontSize: 16,
                                       fontWeight: FontWeight.w600,
                                     ),
+                                  )
+                                ],
+                              ),
+                              PositionedDirectional(
+                                top: 15,
+                                end: 15,
+                                child: InkWell(
+                                  onTap: () {
+                                    controller.onCollect(item: entity, index: index);
+                                  },
+                                  child: Image.asset(
+                                    (entity.isCollected ?? false) ? "assets/images/app/bl_home_like_select.png" : "assets/images/app/bl_home_like_normal.png",
+                                    fit: BoxFit.cover,
                                   ),
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         );
                       },
                       childCount: controller.dataList.length,
+                    ),
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 10,
+                      crossAxisSpacing: 10,
+                      childAspectRatio: 1.0,
                     ),
                   ),
                 ),

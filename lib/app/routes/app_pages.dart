@@ -36,6 +36,8 @@ import '../modules/bl_me/children/bl_me_recharge/views/bl_me_recharge_view.dart'
 import '../modules/bl_me/children/bl_me_setting/bindings/bl_me_setting_binding.dart';
 import '../modules/bl_me/children/bl_me_setting/views/bl_me_setting_view.dart';
 import '../modules/bl_me/views/bl_me_view.dart';
+import '../modules/bl_me_river_pod/bindings/bl_me_river_pod_binding.dart';
+import '../modules/bl_me_river_pod/views/bl_me_river_pod_view.dart';
 import '../modules/bl_message/bl_chat/bindings/bl_chat_binding.dart';
 import '../modules/bl_message/bl_chat/views/bl_chat_view.dart';
 import '../modules/bl_message/bl_conversation/bindings/bl_conversation_binding.dart';
@@ -176,6 +178,11 @@ class AppPages {
       name: _Paths.BL_ME_MEDIA_BLACK_LIST,
       page: () => const BlMeMediaBlackListView(),
       binding: BlMeMediaBlackListBinding(),
+    ),
+    GetPage(
+      name: _Paths.BL_ME_RIVER_POD,
+      page: () => const BlMeRiverPodView(),
+      binding: BlMeRiverPodBinding(),
     ),
   ];
 }

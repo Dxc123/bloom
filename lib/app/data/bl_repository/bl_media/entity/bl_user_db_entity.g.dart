@@ -207,22 +207,23 @@ BlUserDbEntity _blUserDbEntityDeserialize(
   List<int> offsets,
   Map<Type, List<int>> allOffsets,
 ) {
-  final object = BlUserDbEntity();
-  object.avatar = reader.readStringOrNull(offsets[0]);
-  object.createdAt = reader.readLongOrNull(offsets[1]);
-  object.des = reader.readStringOrNull(offsets[2]);
-  object.homeCover = reader.readStringOrNull(offsets[3]);
+  final object = BlUserDbEntity(
+    avatar: reader.readStringOrNull(offsets[0]),
+    createdAt: reader.readLongOrNull(offsets[1]),
+    des: reader.readStringOrNull(offsets[2]),
+    homeCover: reader.readStringOrNull(offsets[3]),
+    isBlacked: reader.readBoolOrNull(offsets[4]),
+    isCollected: reader.readBoolOrNull(offsets[5]),
+    isFollowed: reader.readBoolOrNull(offsets[6]),
+    isLiked: reader.readBoolOrNull(offsets[7]),
+    myId: reader.readStringOrNull(offsets[8]),
+    nickName: reader.readStringOrNull(offsets[9]),
+    picList: reader.readStringList(offsets[10]),
+    title: reader.readStringOrNull(offsets[11]),
+    updatedAt: reader.readLongOrNull(offsets[12]),
+    userId: reader.readStringOrNull(offsets[13]),
+  );
   object.id = id;
-  object.isBlacked = reader.readBoolOrNull(offsets[4]);
-  object.isCollected = reader.readBoolOrNull(offsets[5]);
-  object.isFollowed = reader.readBoolOrNull(offsets[6]);
-  object.isLiked = reader.readBoolOrNull(offsets[7]);
-  object.myId = reader.readStringOrNull(offsets[8]);
-  object.nickName = reader.readStringOrNull(offsets[9]);
-  object.picList = reader.readStringList(offsets[10]);
-  object.title = reader.readStringOrNull(offsets[11]);
-  object.updatedAt = reader.readLongOrNull(offsets[12]);
-  object.userId = reader.readStringOrNull(offsets[13]);
   return object;
 }
 

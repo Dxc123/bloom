@@ -25,7 +25,7 @@ class BlMeMyPublishView extends GetView<BlMeMyPublishController> {
         //         Get.toNamed(Routes.BL_ME_PUBLISH);
         //       },
         //       icon: Image.asset(
-        //         "assets/images/app/tr_publish_to_publis.png",
+        //         "assets/images/app/bl_publish_to_publis.png",
         //         fit: BoxFit.cover,
         //       )),
         //   const SizedBox(width: 15),
@@ -94,7 +94,7 @@ class BlMeMyPublishView extends GetView<BlMeMyPublishController> {
             children: [
               IconButton(
                   onPressed: () {
-                    controller.deletePublishMedia(item);
+                    controller.deletePublishMedia(entity: item,index: index);
                   },
                   icon: Icon(
                     Icons.delete_forever_outlined,
@@ -115,7 +115,7 @@ class BlMeMyPublishView extends GetView<BlMeMyPublishController> {
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.normal,
-                        color: Color(0xFFA4A4A4),
+                        color:  Color(0xFFF95AAA),
                       ),
                     ),
                   )),

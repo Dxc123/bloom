@@ -27,7 +27,7 @@ class BlMeMyFocusListView extends GetView<BlMeMyFocusListController> {
           onRefresh: () {
             controller.onRefresh(showLoading: false);
           },
-          child: controller.dataList.isEmpty && controller.dataList22.isEmpty
+          child: controller.dataList.isEmpty
               ? BlEmptyView(onRefresh: () {
             controller.onRefresh(showLoading: true);
           })
@@ -38,25 +38,25 @@ class BlMeMyFocusListView extends GetView<BlMeMyFocusListController> {
                 sliver: SliverList(
                   delegate: SliverChildBuilderDelegate(
                         (context, index) {
-                      final item = controller.dataList[index];
+                      final BlUserDbEntity item = controller.dataList[index];
                       return buildFollowListItem(item, index);
                     },
                     childCount: controller.dataList.length,
                   ),
                 ),
               ),
-              SliverPadding(
-                padding: const EdgeInsetsDirectional.symmetric(horizontal: 15, vertical: 5),
-                sliver: SliverList(
-                  delegate: SliverChildBuilderDelegate(
-                        (context, index) {
-                      final item = controller.dataList22[index];
-                      return buildFollowListItem22(item, index);
-                    },
-                    childCount: controller.dataList22.length,
-                  ),
-                ),
-              ),
+              // SliverPadding(
+              //   padding: const EdgeInsetsDirectional.symmetric(horizontal: 15, vertical: 5),
+              //   sliver: SliverList(
+              //     delegate: SliverChildBuilderDelegate(
+              //           (context, index) {
+              //         final item = controller.dataList22[index];
+              //         return buildFollowListItem22(item, index);
+              //       },
+              //       childCount: controller.dataList22.length,
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         );
@@ -152,85 +152,85 @@ class BlMeMyFocusListView extends GetView<BlMeMyFocusListController> {
     );
   }
 
-  Widget buildFollowListItem22(BlFlowerDbEntity item, int index) {
-    return GestureDetector(
-      onTap: () {
-        controller.toDetail22(item);
-      },
-      child: Container(
-        height: 80,
-        margin: const EdgeInsetsDirectional.only(bottom: 12),
-        child: Slidable(
-          key: ValueKey("$index"),
-          endActionPane: ActionPane(
-            extentRatio: 0.25,
-            motion: const ScrollMotion(),
-            children: [
-              const SizedBox(width: 22, height: 20),
-              CustomSlidableAction(
-                flex: 1,
-                backgroundColor: const Color(0xFFFF5A5F).withOpacity(0.3),
-                padding: const EdgeInsets.all(10),
-                borderRadius: BorderRadius.circular(16),
-                onPressed: (BuildContext context) {
-                  BlLogger.debug("移除${item.title}");
-                  controller.deleteFollow22(item);
-                },
-                child: Image.asset(
-                  "assets/images/app/zt_conversation_delete.webp",
-                  fit: BoxFit.cover,
-                ),
-              )
-            ],
-          ),
-          child: Container(
-              margin: const EdgeInsetsDirectional.symmetric(horizontal: 16),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  // Row(
-                  //   mainAxisAlignment: MainAxisAlignment.start,
-                  //   children: [
-                  //     Image.asset(
-                  //       item.avatar ?? "",
-                  //       fit: BoxFit.cover,
-                  //     ),
-                  //     const SizedBox(width: 10),
-                  //     Text(
-                  //       item.nickName ?? "",
-                  //       style: const TextStyle(
-                  //         color: Color(0xFF333333),
-                  //         fontSize: 16,
-                  //         fontWeight: FontWeight.w600,
-                  //       ),
-                  //     ),
-                  //   ],
-                  // ),
-                  InkWell(
-                    onTap: () {
-                      controller.deleteFollow22(item);
-                    },
-                    child: Container(
-                      height: 40,
-                      padding: const EdgeInsetsDirectional.symmetric(horizontal: 10, vertical: 10),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFF7F7F7),
-                        borderRadius: BorderRadius.circular(18),
-                      ),
-                      child: Text(
-                        (item.isFollowed ?? false) ? "Followed" : "UnFollow",
-                        style: const TextStyle(
-                          color: Color(0xFFAEAEAE),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              )),
-        ),
-      ),
-    );
-  }
+  // Widget buildFollowListItem22(BlFlowerDbEntity item, int index) {
+  //   return GestureDetector(
+  //     onTap: () {
+  //       controller.toDetail22(item);
+  //     },
+  //     child: Container(
+  //       height: 80,
+  //       margin: const EdgeInsetsDirectional.only(bottom: 12),
+  //       child: Slidable(
+  //         key: ValueKey("$index"),
+  //         endActionPane: ActionPane(
+  //           extentRatio: 0.25,
+  //           motion: const ScrollMotion(),
+  //           children: [
+  //             const SizedBox(width: 22, height: 20),
+  //             CustomSlidableAction(
+  //               flex: 1,
+  //               backgroundColor: const Color(0xFFFF5A5F).withOpacity(0.3),
+  //               padding: const EdgeInsets.all(10),
+  //               borderRadius: BorderRadius.circular(16),
+  //               onPressed: (BuildContext context) {
+  //                 BlLogger.debug("移除${item.title}");
+  //                 controller.deleteFollow22(item);
+  //               },
+  //               child: Image.asset(
+  //                 "assets/images/app/zt_conversation_delete.webp",
+  //                 fit: BoxFit.cover,
+  //               ),
+  //             )
+  //           ],
+  //         ),
+  //         child: Container(
+  //             margin: const EdgeInsetsDirectional.symmetric(horizontal: 16),
+  //             child: Row(
+  //               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  //               children: [
+  //                 // Row(
+  //                 //   mainAxisAlignment: MainAxisAlignment.start,
+  //                 //   children: [
+  //                 //     Image.asset(
+  //                 //       item.avatar ?? "",
+  //                 //       fit: BoxFit.cover,
+  //                 //     ),
+  //                 //     const SizedBox(width: 10),
+  //                 //     Text(
+  //                 //       item.nickName ?? "",
+  //                 //       style: const TextStyle(
+  //                 //         color: Color(0xFF333333),
+  //                 //         fontSize: 16,
+  //                 //         fontWeight: FontWeight.w600,
+  //                 //       ),
+  //                 //     ),
+  //                 //   ],
+  //                 // ),
+  //                 InkWell(
+  //                   onTap: () {
+  //                     controller.deleteFollow22(item);
+  //                   },
+  //                   child: Container(
+  //                     height: 40,
+  //                     padding: const EdgeInsetsDirectional.symmetric(horizontal: 10, vertical: 10),
+  //                     decoration: BoxDecoration(
+  //                       color: const Color(0xFFF7F7F7),
+  //                       borderRadius: BorderRadius.circular(18),
+  //                     ),
+  //                     child: Text(
+  //                       (item.isFollowed ?? false) ? "Followed" : "UnFollow",
+  //                       style: const TextStyle(
+  //                         color: Color(0xFFAEAEAE),
+  //                         fontSize: 16,
+  //                         fontWeight: FontWeight.w600,
+  //                       ),
+  //                     ),
+  //                   ),
+  //                 ),
+  //               ],
+  //             )),
+  //       ),
+  //     ),
+  //   );
+  // }
 }

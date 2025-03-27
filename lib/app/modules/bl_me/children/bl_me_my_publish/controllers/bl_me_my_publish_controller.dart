@@ -11,6 +11,7 @@ class BlMeMyPublishController extends GetxController {
   final RefreshController refreshController = RefreshController(initialRefresh: false);
   var dataList = <BlPublishMediaEntity>[].obs;
   StreamSubscription<List<BlPublishMediaEntity>>? publishSub;
+
   @override
   void onInit() async {
     super.onInit();
@@ -19,7 +20,6 @@ class BlMeMyPublishController extends GetxController {
       dataList.clear();
       dataList.value = list;
     });
-
   }
 
   @override
@@ -40,16 +40,18 @@ class BlMeMyPublishController extends GetxController {
     });
   }
 
-  void deletePublishMedia(BlPublishMediaEntity model) {
+  void deletePublishMedia({
+    required BlPublishMediaEntity entity,
+    required int index,
+  }) async {
     EasyLoading.show();
     Future.delayed(const Duration(milliseconds: 200), () async {
       EasyLoading.dismiss();
       await BlPublishMediaRepository.to.deleteOnePublishMedia(
-          publishMedia: model,
+          publishMedia: entity,
           callback: () {
-            onRefresh();
+            dataList.removeAt(index);
           });
     });
   }
 }
-
